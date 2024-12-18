@@ -17,8 +17,8 @@ to GOKZ. The most important changes include:
 The new tiering system consists of 10 different tiers:
 
 > [!NOTE]
-> These are best-effort descriptions, not hard rules. They are meant to get a
-> point across, not to be taken literally.
+> These are best-effort descriptions, not hard rules. They are meant to illustrate the key ideas,
+> not to be interpreted literally.
 
 1. Very Easy - for the average player who has never touched KZ before
 2. Easy - you grasp the basics of CS2 movement, like airstrafing and bhopping
@@ -39,60 +39,53 @@ Unlike in GOKZ, tiers will not be applied to maps anymore, but rather to
 
 ## Courses
 
-Each map can have one or more "courses". Simply put: a course is a section of
-gameplay with a start and end zone. However, unlike in GOKZ, there will be no
-concept of "main" and "bonus" courses anymore; just courses.
+Each map in CS2KZ consists of one or more "courses." A course is a segment of gameplay
+ defined by a start and an end zone. Unlike GOKZ, CS2KZ eliminates the distinction between
+  "main" and "bonus" courses—there are simply courses.
 
-In order to get your map approved you must uphold a minimum quality standard
-(which has not been defined yet), but because we want to allow mappers to be
-creative, while keeping competition reasonable, we are introducing the concept
-of "ranked" [filters](#filters). This means that mappers can have high quality,
-high effort courses that would have been "main" courses in GOKZ, which players
-compete on, but also silly courses, which previously were called "bonuses". In
-order for a filter to be ranked, it must be tier 8 or lower, and "reasonable to
-compete on" (a subjective rating that has not been defined yet).
+To have a [map approved](./MapApproval.md), mappers must meet a minimum quality standard 
+(not yet defined). To balance creativity with fair competition, CS2KZ introduces the concept
+ of "ranked" filters. This allows for diverse course types:
+
+- High-quality, high-effort courses (formerly "main" courses in GOKZ) designed for competitive play.
+- Fun or experimental courses (previously "bonus" courses) that offer more creative gameplay.
+
+For a filter to be ranked, it must:
+
+- Be a tier of 8 or lower.
+- Be "reasonable to compete on" (a subjective standard to be further clarified later in development).
 
 ## Filters
 
-A filter is a combination of a course, a mode, and whether teleports are
-used. Each course will have 4 filters applied to it:
+In CS2KZ, each course has a filter which represents a unique combination of mode,
+ teleport settings, difficulty tier, and "ranked" status. Filters create different 
+ variations of a course, providing players with distinct challenges and aligning the 
+ course with the appropriate difficulty level.
 
-1. VNL with teleports
-2. VNL without teleports
-3. CKZ with teleports
-4. CKZ without teleports
+### Key Components of a Filter
 
-Each filter will have its own [tier](#tiers) and its own "ranked" status. As
-mentioned in [Courses](#courses), ranked filters have higher requirements than
-unranked ones, but can be part of the same map. **Every** record, nomatter the
-filter, will be stored and displayed on a leaderboard on the official
-website. However, only **ranked** records will award points. This is to keep
-competition reasonable while allowing mappers creative freedom.
+1. **Mode** - This defines how the course is played (either [CKZ](./Modes.md#Classic) or [VNL](./Modes.md#Vanilla))
+2. **Teleport Settings** - Whether or not teleports are allowed in the course
+3. **Tier** - Each Filter will have a [tier](#tiers), which indicates the difficulty level of the filter, determined
+ by the course’s complexity and challenge. Filters can range from Tier 1 (Very East) to Tier 10 (Impossible). 
+4. **Ranked Status** - This indicates whether the filter is ranked or unranked.
 
-An example filter looks like this:
+#### Example Filter
 
-- kz_creative_name, course 3
-- CKZ
-- no teleports
-- tier 4
-- ranked
+- **Map:** kz_example_map, course 3  
+- **Mode:** CKZ  
+- **Teleport Setting:** No teleports  
+- **Tier:** 4  
+- **Ranked Status:** Ranked  
 
-Filters can, and will, change over time as the skill ceiling of KZ increases,
-and boundaries get broken. We will try to figure out a system that lets the
-community have a word in changing things when desired, and **no data will be lost**.
+
+Filters will evolve over time as the skill ceiling of KZ grows and new boundaries are reached. We aim to create a system
+ that allows the community to have input in making changes when needed, while ensuring **no data is lost.**
 So go and play what you enjoy!
 
-## Map approval process
+> [!NOTE]  
+> Only records from ranked filters will contribute to a player's overall rank and award points. This ensures a 
+> fair competitive environment while giving mappers the freedom to create diverse courses.
 
-Some details on this have not been decided yet, but it will be similar to GOKZ.
 
-- There will be a selected group of people invested into the KZ community that
-  have enough experience to make informed decisions about the difficulty and
-  rankability of courses in all the mode combinations.
-- There will be an objective minimum quality standard any global KZ map has to
-  fulfill.
-- Whether something is rankable depends partially on objective measurements, but
-  will also be subjective to a certain degree ("reasonable to compete on").
-- Every global KZ map has to have **at least one** course with a filter of tier
-  8 or lower attached to it.
-- Every global KZ map must be uploaded to the [CS2 Steam Workshop](https://steamcommunity.com/app/730/workshop).
+

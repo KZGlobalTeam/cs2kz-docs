@@ -35,6 +35,13 @@ function sidebar() {
       items: [
         { text: "Modes", link: "/guides/Modes" },
         { text: "Maps", link: "/guides/Maps" },
+        { text: "Points", link: "/guides/Points" },
+      ],
+    },
+    {
+      text: "CS2KZ Creator Resources",
+      items: [
+        { text: "Map Approval Process", link: "/guides/MapApproval" },
       ],
     },
   ];
