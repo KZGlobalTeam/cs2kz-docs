@@ -26,7 +26,7 @@ The goal is to make KZ more skill-based than RNG-based.
 - Bhopping is consistent with good scroll-timing.
 - Bhop speed depends on landing speed.
 
-Players found SKZ felt slow (~270 speed while bhopping), while consistently reaching
+Players found that SKZ felt slow (~270 speed while bhopping), while consistently reaching
 380u/s was difficult and annoying on most maps. CKZ addresses this with a **logarithmic speed formula**:
 
 - Higher initial speed gains compared to SKZ.

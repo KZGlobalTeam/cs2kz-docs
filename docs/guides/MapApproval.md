@@ -1,6 +1,6 @@
 # Map approval process
 
-The structure will closely resemble GOKZ, with a few key details still to be finalized:
+The map approval process structure will closely resemble GOKZ, with a few key details still to be finalized:
 
 ## 1. Submission
 

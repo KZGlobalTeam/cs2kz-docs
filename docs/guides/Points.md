@@ -29,7 +29,7 @@ The amount of points rewarded after completing a map is based on the following:
 
 - **Course Difficulty:** More difficult courses yield higher point rewards. The difficulty of a course is tied to its filter's tier.
 - **Performance:** Faster completion times and improved performance on a course will result in more points.
-- **Filter Type** his refers to the overall characteristics of the filter, such as teleport settings and other conditions. The more 
+- **Filter Type:** Refers to the overall characteristics of the filter, such as teleport settings and other conditions. The more 
 challenging the filter type, the more points are awarded.
 
 ## Rank

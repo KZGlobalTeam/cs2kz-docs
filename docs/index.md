@@ -11,7 +11,7 @@ description: Home page
 
 - [KZTimer global whitelisting guide](/guides/global-kztimer) -->
 # Welcome to CS2KZ
-CS2KZ is a skill-based mod for Counter-Strike where players complete challenging obstacle courses 
+CS2KZ is a skill-based mod for Counter-Strike 2 where players complete challenging obstacle courses 
 that test their precision, speed, and movement skills. Compete against yourself or others, improve your abilities, 
 and climb the ranks as you master each course.
 
@@ -20,6 +20,7 @@ and climb the ranks as you master each course.
 - [Modes](/guides/Modes)
 - [Maps](/guides/Maps)
 - [Points](/guides/Points)
+- [Styles](/guides/Styles)
 
 ## CS2KZ Creator Resources
 

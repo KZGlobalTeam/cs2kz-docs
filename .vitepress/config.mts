@@ -36,6 +36,7 @@ function sidebar() {
         { text: "Modes", link: "/guides/Modes" },
         { text: "Maps", link: "/guides/Maps" },
         { text: "Points", link: "/guides/Points" },
+        { text: "Styles", link: "/guides/Styles" },
       ],
     },
     {
