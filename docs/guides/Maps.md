@@ -43,7 +43,7 @@ Each map in CS2KZ consists of one or more "courses." A course is a segment of ga
  defined by a start and an end zone. Unlike GOKZ, CS2KZ eliminates the distinction between
   "main" and "bonus" courses—there are simply courses.
 
-To have a [map approved](./MapApproval.md), mappers must meet a minimum quality standard 
+To have a [map approved](/mapping/approval), mappers must meet a minimum quality standard 
 (not yet defined). To balance creativity with fair competition, CS2KZ introduces the concept
  of "ranked" filters. This allows for diverse course types:
 
@@ -64,7 +64,7 @@ In CS2KZ, each course has a filter which represents a unique combination of mode
 
 ### Key Components of a Filter
 
-1. **Mode** - This defines how the course is played (either [CKZ](./Modes.md#Classic) or [VNL](./Modes.md#Vanilla))
+1. **Mode** - This defines how the course is played (either [CKZ](/systems/modes#Classic) or [VNL](/systems/modes#Vanilla))
 2. **Teleport Settings** - Whether or not teleports are allowed in the course
 3. **Tier** - Each Filter will have a [tier](#tiers), which indicates the difficulty level of the filter, determined
  by the course’s complexity and challenge. Filters can range from Tier 1 (Very East) to Tier 10 (Impossible). 

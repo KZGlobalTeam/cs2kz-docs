@@ -15,16 +15,16 @@ CS2KZ is a skill-based mod for Counter-Strike 2 where players complete challengi
 that test their precision, speed, and movement skills. Compete against yourself or others, improve your abilities, 
 and climb the ranks as you master each course.
 
-## CS2KZ Gamemode Information
+## Systems
 
-- [Modes](/guides/Modes)
-- [Maps](/guides/Maps)
-- [Points](/guides/Points)
+- [Modes](/systems/modes)
+- [Maps](/systems/maps)
+- [Points](/systems/points)
 - [Styles](/guides/Styles)
 
-## CS2KZ Creator Resources
+## Creator resources
 
-- [Map approval process](/guides/MapApproval)
+- [Map approval process](/mapping/approval)
 
 
 <!-- # Uncategorized guides

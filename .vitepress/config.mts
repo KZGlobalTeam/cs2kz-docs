@@ -2,10 +2,11 @@ import { defineConfig } from 'vitepress'
 
 export default defineConfig({
   title: "CS2 KZ Docs",
-  description: "CS 2 Kreedz documentation",
+  description: "CS2 Kreedz documentation",
   head: [['link', { rel: 'icon', href: '/public/favicon.ico' }]],
   srcDir: "docs",
 
+cleanUrls: true
   themeConfig: {
     nav: nav(),
     sidebar: sidebar(),
@@ -31,18 +32,18 @@ function nav() {
 function sidebar() {
   return [
     {
-      text: "CS2KZ Gamemode Info",
+      text: "Systems",
       items: [
-        { text: "Modes", link: "/guides/Modes" },
-        { text: "Maps", link: "/guides/Maps" },
-        { text: "Points", link: "/guides/Points" },
+        { text: "Modes", link: "/systems/modes" },
+        { text: "Maps", link: "/systems/maps" },
+        { text: "Points", link: "/systems/points" },
         { text: "Styles", link: "/guides/Styles" },
       ],
     },
     {
-      text: "CS2KZ Creator Resources",
+      text: "Creator resources",
       items: [
-        { text: "Map Approval Process", link: "/guides/MapApproval" },
+        { text: "Map Approval Process", link: "/mapping/approval" },
       ],
     },
   ];

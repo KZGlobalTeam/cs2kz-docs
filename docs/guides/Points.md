@@ -9,7 +9,7 @@ There are two types of points that are awarded in CS2KZ:
 
 ### 1. Filter Points
 
-These points are tied to a specific [Filter](./Maps.md#filters) applied to a course and measure a player’s performance on that particular combination of map, mode, and settings.
+These points are tied to a specific [Filter](/systems/maps#filters) applied to a course and measure a player’s performance on that particular combination of map, mode, and settings.
 
 - **Max Points Per Filter:** The world record (WR) holder for a filter earns the maximum of 10,000 points. Players with slower times earn fewer points based on their performance 
 relative to the WR and the rest of the player base that has completed the filter
