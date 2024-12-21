@@ -3,10 +3,9 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: "CS2 KZ Docs",
   description: "CS2 Kreedz documentation",
-  head: [['link', { rel: 'icon', href: '/public/favicon.ico' }]],
+  head: [['link', { rel: 'icon', href: '/favicon.ico' }]],
   srcDir: "docs",
-
-cleanUrls: true
+  cleanUrls: true,
   themeConfig: {
     nav: nav(),
     sidebar: sidebar(),
@@ -37,7 +36,7 @@ function sidebar() {
         { text: "Modes", link: "/systems/modes" },
         { text: "Maps", link: "/systems/maps" },
         { text: "Points", link: "/systems/points" },
-        { text: "Styles", link: "/guides/Styles" },
+        { text: "Styles", link: "/systems/styles" },
       ],
     },
     {
