@@ -7,7 +7,7 @@ to GOKZ. The most important changes include:
 - Instead of a "main" course and 0 or more "bonus" courses we will just have
   "courses".
 - Each course will have 4 "filters" applied to it. Each filter consists of a
-  [mode](./Modes.md), whether teleports are allowed, a tier, and a "ranked" status.
+  [mode](/systems/modes), whether teleports are allowed, a tier, and a "ranked" status.
 - Every submitted record will be stored, independent of filters, but only
   records that correspond to a "ranked" filter will contribute to a player's
   overall rank.
