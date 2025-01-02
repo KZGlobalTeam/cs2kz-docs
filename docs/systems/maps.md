@@ -4,13 +4,11 @@ Maps and everything surrounding them will be quite different in CS2KZ compared
 to GOKZ. The most important changes include:
 
 - Instead of the original 7 difficulty tiers we now have 10.
-- Instead of a "main" course and 0 or more "bonus" courses we will just have
-  "courses".
+- Instead of a "main" course and 0 or more "bonus" courses we will just have "courses".
 - Each course will have 4 "filters" applied to it. Each filter consists of a
-  [mode](/systems/modes), whether teleports are allowed, a tier, and a "ranked" status.
+  [mode](/systems/modes), whether teleports are allowed, a tier, and "ranked" status.
 - Every submitted record will be stored, independent of filters, but only
-  records that correspond to a "ranked" filter will contribute to a player's
-  overall rank.
+  records that correspond to a "ranked" filter will contribute to a player's overall rank.
 
 ## Tiers
 
@@ -43,8 +41,7 @@ Each map in CS2KZ consists of one or more "courses." A course is a segment of ga
  defined by a start and an end zone. Unlike GOKZ, CS2KZ eliminates the distinction between
   "main" and "bonus" courses—there are simply courses.
 
-To have a [map approved](/mapping/approval), mappers must meet a minimum quality standard 
-(not yet defined). To balance creativity with fair competition, CS2KZ introduces the concept
+To have a [map approved](/mapping/approval), mappers must meet a minimum quality standard (not yet defined). To balance creativity with fair competition, CS2KZ introduces the concept
  of "ranked" filters. This allows for diverse course types:
 
 - High-quality, high-effort courses (formerly "main" courses in GOKZ) designed for competitive play.
@@ -58,34 +55,27 @@ For a filter to be ranked, it must:
 ## Filters
 
 In CS2KZ, each course has a filter which represents a unique combination of mode,
- teleport settings, difficulty tier, and "ranked" status. Filters create different 
- variations of a course, providing players with distinct challenges and aligning the 
- course with the appropriate difficulty level.
+ teleport settings, difficulty tier, and "ranked" status. Filters create different variations of a course, providing players with distinct challenges and aligning the course with the appropriate difficulty level.
 
 ### Key Components of a Filter
 
 1. **Mode** - This defines how the course is played (either [CKZ](/systems/modes#Classic) or [VNL](/systems/modes#Vanilla))
 2. **Teleport Settings** - Whether or not teleports are allowed in the course
 3. **Tier** - Each Filter will have a [tier](#tiers), which indicates the difficulty level of the filter, determined
- by the course’s complexity and challenge. Filters can range from Tier 1 (Very East) to Tier 10 (Impossible). 
+ by the course’s complexity and challenge. Filters can range from Tier 1 (Very East) to Tier 10 (Impossible).
 4. **Ranked Status** - This indicates whether the filter is ranked or unranked.
 
 #### Example Filter
 
-- **Map:** kz_example_map, course 3  
-- **Mode:** CKZ  
-- **Teleport Setting:** No teleports  
-- **Tier:** 4  
-- **Ranked Status:** Ranked  
+- **Map:** kz_example_map, course 3
+- **Mode:** CKZ
+- **Teleport Setting:** No teleports
+- **Tier:** 4
+- **Ranked Status:** Ranked
 
 
-Filters will evolve over time as the skill ceiling of KZ grows and new boundaries are reached. We aim to create a system
- that allows the community to have input in making changes when needed, while ensuring **no data is lost.**
+Filters will evolve over time as the skill ceiling of KZ grows and new boundaries are reached. We aim to create a system that allows the community to have input in making changes when needed, while ensuring **no data is lost.**
 So go and play what you enjoy!
 
-> [!NOTE]  
-> Only records from ranked filters will contribute to a player's overall rank and award points. This ensures a 
-> fair competitive environment while giving mappers the freedom to create diverse courses.
-
-
-
+> [!NOTE]
+> Only records from ranked filters will contribute to a player's overall rank and award points. This ensures a fair competitive environment while giving mappers the freedom to create diverse courses.

@@ -1,7 +1,7 @@
 # Points & Rank
 
-In CS2KZ, players earn points by completing courses and achieving faster times across different modes and filters. 
-As players accumulate points, they advance through different ranks which reflect greater KZ skill. 
+In CS2KZ, players earn points by completing courses and achieving faster times across different modes and filters.
+As players accumulate points, they advance through different ranks which reflect greater KZ skill.
 
 ## Types of Points
 
@@ -11,7 +11,7 @@ There are two types of points that are awarded in CS2KZ:
 
 These points are tied to a specific [Filter](/systems/maps#filters) applied to a course and measure a player’s performance on that particular combination of map, mode, and settings.
 
-- **Max Points Per Filter:** The world record (WR) holder for a filter earns the maximum of 10,000 points. Players with slower times earn fewer points based on their performance 
+- **Max Points Per Filter:** The world record (WR) holder for a filter earns the maximum of 10,000 points. Players with slower times earn fewer points based on their performance
 relative to the WR and the rest of the player base that has completed the filter
 
 - **Purpose:** Filter points indicate how skilled a player is at a specific map, mode, and filter combination.
@@ -29,8 +29,7 @@ The amount of points rewarded after completing a map is based on the following:
 
 - **Course Difficulty:** More difficult courses yield higher point rewards. The difficulty of a course is tied to its filter's tier.
 - **Performance:** Faster completion times and improved performance on a course will result in more points.
-- **Filter Type:** Refers to the overall characteristics of the filter, such as teleport settings and other conditions. The more 
-challenging the filter type, the more points are awarded.
+- **Filter Type:** Refers to the overall characteristics of the filter, such as teleport settings and other conditions. The more challenging the filter type, the more points are awarded.
 
 ## Rank
 
