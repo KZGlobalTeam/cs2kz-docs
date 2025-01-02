@@ -1,0 +1,25 @@
+name: build
+
+on:
+  workflow_run:
+    types: [completed]
+    branches: [master]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+
+    - name: Build the docs
+      run: |
+        npm ci
+        npm run build
+
+    - name: Deploy to Public branch
+      uses: JamesIves/github-pages-deploy-action@4.7.2
+      with:
+        branch: public
+        folder: .vitepress/dist

@@ -1,0 +1,32 @@
+name: preview
+
+on:
+  pull_request_target:
+    types: [opened]
+    branches: [master]
+
+jobs:
+  preview:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/github-script@v6
+        with:
+          script: |
+            const head = context.payload.pull_request.head;
+
+            const headRepo = encodeURIComponent(head.repo.name);
+            const headOwner = encodeURIComponent(head.repo.owner.login);
+
+            const previewLink = `https://pr.new/github.com/${headOwner}/${headRepo}/pull/${pullNum}`;
+
+            const lines = [
+              "[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](${previewLink})",
+              "Run and preview this PR in [StackBlitz](${previewLink})",
+            ];
+
+            github.rest.issues.createComment({
+              repo: context.repo.repo,
+              owner: context.repo.owner,
+              issue_number: context.issue.number,
+              body: lines.join("\n")
+            });
