@@ -14,10 +14,10 @@ jobs:
           script: |
             const pr = context.payload.pull_request;
 
-            const headRepo = encodeURIComponent(pr.head.repo.name);
-            const headOwner = encodeURIComponent(pr.head.repo.owner.login);
+            const repo = encodeURIComponent(pr.repo.name);
+            const owner = encodeURIComponent(pr.repo.owner.login);
 
-            const previewLink = `https://pr.new/github.com/${headOwner}/${headRepo}/pull/${pr.number}`;
+            const previewLink = `https://pr.new/github.com/${owner}/${repo}/pull/${pr.number}`;
 
             const lines = [
               `[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](${previewLink})`,
