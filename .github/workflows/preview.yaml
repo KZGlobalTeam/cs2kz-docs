@@ -12,12 +12,12 @@ jobs:
       - uses: actions/github-script@v6
         with:
           script: |
-            const head = context.payload.pull_request.head;
+            const pr = context.payload.pull_request;
 
-            const headRepo = encodeURIComponent(head.repo.name);
-            const headOwner = encodeURIComponent(head.repo.owner.login);
+            const headRepo = encodeURIComponent(pr.head.repo.name);
+            const headOwner = encodeURIComponent(pr.head.repo.owner.login);
 
-            const previewLink = `https://pr.new/github.com/${headOwner}/${headRepo}/pull/${pullNum}`;
+            const previewLink = `https://pr.new/github.com/${headOwner}/${headRepo}/pull/${pr.number}`;
 
             const lines = [
               "[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](${previewLink})",
