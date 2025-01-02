@@ -18,7 +18,7 @@ jobs:
         npm run build
 
     - name: Deploy to Public branch
-      uses: JamesIves/github-pages-deploy-action@4.7.2
+      uses: JamesIves/github-pages-deploy-action@v4.7.2
       with:
         branch: public
         folder: .vitepress/dist
