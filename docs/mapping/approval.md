@@ -9,11 +9,10 @@ The map approval process structure will closely resemble GOKZ, with a few key de
 
 ## 2. Review
 
-- **Approval Team:** A group of experienced KZ community members will review the map. They are responsible for evaluating the course 
+- **Approval Team:** A group of experienced KZ community members will review the map. They are responsible for evaluating the course
 difficulty, ranking potential, and adherence to community standards.
 - **Objective Evaluation:** Maps will be assessed on objective metrics such as difficulty, design, and gameplay quality.
-- **Subjective Evaluation:** The team will also consider whether the course is "reasonable to compete on," allowing for some flexibility and creative expression 
-in map design.
+- **Subjective Evaluation:** The team will also consider whether the course is "reasonable to compete on," allowing for some flexibility and creative expression in map design.
 
 ## 3. Publication
 

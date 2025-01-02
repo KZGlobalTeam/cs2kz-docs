@@ -1,8 +1,6 @@
 # Styles
 
-Styles in CS2KZ are optional modifiers that alter gameplay, offering creative and fun ways to explore maps beyond
- ranked competition. They don’t affect leaderboards or ranks but let players experiment, practice, or take on new
-  challenges.
+Styles in CS2KZ are optional modifiers that alter gameplay, offering creative and fun ways to explore maps beyond ranked competition. They don’t affect leaderboards or ranks but let players experiment, practice, or take on new challenges.
 
 ## Examples of styles
 
