@@ -20,8 +20,8 @@ jobs:
             const previewLink = `https://pr.new/github.com/${headOwner}/${headRepo}/pull/${pr.number}`;
 
             const lines = [
-              "[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](${previewLink})",
-              "Run and preview this PR in [StackBlitz](${previewLink})",
+              `[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](${previewLink})`,
+              `Run and preview this PR in [StackBlitz](${previewLink})`,
             ];
 
             github.rest.issues.createComment({
