@@ -20,7 +20,7 @@ and climb the ranks as you master each course.
 - [Modes](/systems/modes)
 - [Maps](/systems/maps)
 - [Points](/systems/points)
-- [Styles](/guides/Styles)
+- [Styles](/systems/styles)
 
 ## Creator resources
 
