@@ -2,7 +2,7 @@ name: preview
 
 on:
   pull_request_target:
-    types: [opened]
+    types: [opened, reopened]
     branches: [master]
 
 jobs:
@@ -12,21 +12,30 @@ jobs:
       - uses: actions/github-script@v6
         with:
           script: |
-            const pr = context.payload.pull_request;
+            const issue = {
+              repo: context.repo.repo,
+              owner: context.repo.owner,
+              issue_number: context.issue.number,
+            };
 
-            const repo = encodeURIComponent(pr.repo.name);
-            const owner = encodeURIComponent(pr.repo.owner.login);
+            const repo = encodeURIComponent(context.repo.repo);
+            const owner = encodeURIComponent(context.repo.owner);
+            const prNumber = context.payload.pull_request.number;
 
-            const previewLink = `https://pr.new/github.com/${owner}/${repo}/pull/${pr.number}`;
+            const previewLink = `https://pr.new/github.com/${owner}/${repo}/pull/${prNumber}`;
 
             const lines = [
               `[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](${previewLink})`,
               `Run and preview this PR in [StackBlitz](${previewLink})`,
             ];
 
-            github.rest.issues.createComment({
-              repo: context.repo.repo,
-              owner: context.repo.owner,
-              issue_number: context.issue.number,
-              body: lines.join("\n")
-            });
+            const comment = lines.join("\n");
+            const comments = await github.rest.issues.listComments(issue);
+
+            const commentExists = comments.find((c) => c.body === comment);
+            if (!commentExists) {
+              await github.rest.issues.createComment({
+                ...issue,
+                body: comment,
+              });
+            }
