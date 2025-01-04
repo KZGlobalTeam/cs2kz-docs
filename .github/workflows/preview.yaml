@@ -32,7 +32,7 @@ jobs:
             const comment = lines.join("\n");
             const comments = await github.rest.issues.listComments(issue);
 
-            const commentExists = comments.find((c) => c.body === comment);
+            const commentExists = comments.data.find((c) => c.body === comment);
             if (!commentExists) {
               await github.rest.issues.createComment({
                 ...issue,
