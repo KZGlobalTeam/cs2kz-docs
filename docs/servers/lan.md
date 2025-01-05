@@ -156,7 +156,7 @@ FileSystem
 
 2. Extract the `zip` (Windows) or `tar.gz` (Linux), then drag the `addons` and `cfg` folders into the `\csgo\` folder.
 
-#### Database Support
+#### Database support
 
 1. Open [SQLMM](https://github.com/zer0k-z/sql_mm/releases) releases and download the latest release for your operating system (Windows/Linux).
 
