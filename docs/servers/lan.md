@@ -7,7 +7,7 @@ There are 4 steps for setting up a CS2KZ **LAN** server:
 3. [KZ plugins](#kz-plugins): Adding essential plugins to make KZ work properly.
 4. [Maps](#adding-maps): Adding KZ maps to the server.
 
-<br>
+
 
 > [!WARNING]
 > This guide is **ONLY** for Windows devices
@@ -51,7 +51,7 @@ There are 4 steps for setting up a CS2KZ **LAN** server:
 
 ### 4. Adding a Steam GSLT token
 
-1. Navigate to [Steam GSLT Tokens](https://steamcommunity.com/dev/managegameservers) (log in with steam if you aren't already).
+1. Navigate to [Steam GSLT tokens](https://steamcommunity.com/dev/managegameservers) (log in with Steam if you aren't already).
 
 2. At the bottom under `Create a new game server account` set the App ID as `730` and click `Create`
 
@@ -94,7 +94,7 @@ the `\csgo\` folder of the server.
 
 > [!INFO]  
 > The `\csgo\` folder can be found in:
-> ```FilePath
+> ```batch
 > \cs2kz_server\steamcmd\steamapps\common\Counter-Strike Global Offensive\game\
 >```
 > If you have followed this guide exactly as explained.
@@ -107,7 +107,7 @@ Game    csgo/addons/metamod
 ```
 
 ::: details When complete, the file should look like this:
-```txt
+```txt{22}
 "GameInfo"
 {
 // ********************************************************************************
@@ -175,16 +175,15 @@ FileSystem
 2. Edit the `start.bat` (created in [Server Setup](#server-setup)) and add either `+host_workshop_map` or `+host_workshop_collection` command along with the
 `ID` of the map/collection to the 2nd row on the file. If you've followed this guide exactly as instructed it should look something like this:
 
-::: code-group  
-```batch [Map]
-cd ".\steamcmd\steamapps\common\Counter-Strike Global Offensive\game\bin\win64"
-start cs2.exe -dedicated +map de_dust2 +sv_setsteamaccount GSLT_TOKEN +host_workshop_map MAP_ID
-:::
-
 ::: code-group
+```batch [Map]
+cd ".\steamcmd\steamapps\common\Counter-Strike Global Offensive\game\bin\win64\"
+start cs2.exe -dedicated +map de_dust2 +sv_setsteamaccount GSLT_TOKEN +host_workshop_map MAP_ID
+```
 ```batch [Collection]  
 cd ".\steamcmd\steamapps\common\Counter-Strike Global Offensive\game\bin\win64\"  
-start cs2.exe -dedicated +map de_dust2 +sv_setsteamaccount GSLT_TOKEN +host_workshop_collection COLLECTION_ID  
+start cs2.exe -dedicated +map de_dust2 +sv_setsteamaccount GSLT_TOKEN +host_workshop_collection COLLECTION_ID
+```
 :::
 
 Replacing `MAP_ID`/`COLLECTION_ID` with the correct ID & `GSLT_TOKEN` with your token.
