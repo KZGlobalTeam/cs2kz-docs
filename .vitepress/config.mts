@@ -40,6 +40,12 @@ function sidebar() {
       ],
     },
     {
+      text: "Servers",
+      items: [
+        { text: "LAN Server Setup", link: "/servers/lan" },
+      ],
+    },
+    {
       text: "Creator resources",
       items: [
         { text: "Map Approval Process", link: "/mapping/approval" },
