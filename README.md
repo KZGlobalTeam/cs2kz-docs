@@ -10,10 +10,15 @@ and more. Whether you're a player, developer, or map creator, this documentation
 ## Topics
 
 ### Systems
+
 - [Modes](./docs/systems/modes.md)
 - [Maps](./docs/systems/maps.md)
 - [Points](./docs/systems/points.md)
 - [Styles](./docs/systems/styles.md)
+
+### Servers
+
+- [LAN server setup](./docs/servers/lan)
 
 ### Creator Resources
 

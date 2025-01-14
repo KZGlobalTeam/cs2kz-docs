@@ -13,6 +13,10 @@ CS2KZ is a skill-based mod for Counter-Strike 2 where players complete challengi
 - [Points](/systems/points)
 - [Styles](/systems/styles)
 
+## Servers
+
+- [LAN Server Setup](/servers/lan)
+
 ## Creator resources
 
-- [Map approval process](/mapping/approval)
+- [Map Approval Process](/mapping/approval)
