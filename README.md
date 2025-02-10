@@ -1,23 +1,11 @@
 # CS2KZ Documentation
 
-Welcome to the official CS2KZ documentation repository! 
+Welcome to the official CS2KZ documentation repository!
 
-This project provides resources and guides for the CS2KZ community, including map creation, modes, filters, 
+This project provides resources and guides for the CS2KZ community, including map creation, modes, filters,
 and more. Whether you're a player, developer, or map creator, this documentation will help you understand the ins and outs of CS2KZ.
 
 > https://docs.cs2kz.org
-
-## Topics
-
-### Systems
-- [Modes](./docs/systems/modes.md)
-- [Maps](./docs/systems/maps.md)
-- [Points](./docs/systems/points.md)
-- [Styles](./docs/systems/styles.md)
-
-### Creator Resources
-
-- [Map Approval Process](./docs/mapping/approval.md)
 
 ## Running locally
 

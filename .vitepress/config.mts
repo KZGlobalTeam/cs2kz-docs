@@ -1,14 +1,33 @@
-import { defineConfig } from 'vitepress'
+import { defineConfig } from "vitepress";
+import type { DefaultTheme } from "vitepress";
+
+import { getSidebarItems } from "./openapi";
 
 export default defineConfig({
-  title: "CS2 KZ Docs",
-  description: "CS2 Kreedz documentation",
-  head: [['link', { rel: 'icon', href: '/favicon.ico' }]],
+  title: "CS2KZ Docs",
+  description: "Documentation for CS2KZ",
+
+  head: [
+    ["link", { rel: "icon", href: "/favicon.ico" }]
+  ],
+
   srcDir: "docs",
   cleanUrls: true,
+
+  titleTemplate: "CS2KZ | :title",
+
   themeConfig: {
     nav: nav(),
-    sidebar: sidebar(),
+    sidebar: {
+      "/": sidebar(),
+      "/api/": [
+        {
+          text: "Introduction",
+          link: "/api/"
+        },
+        ...await getSidebarItems("/api/"),
+      ]
+    },
 
     socialLinks: [
       { icon: "github", link: "https://github.com/KZGlobalTeam/cs2kz-docs" },
@@ -22,13 +41,24 @@ export default defineConfig({
   },
 });
 
-function nav() {
+function nav(): DefaultTheme.NavItem[] {
   return [
-    { text: "Portal", link: "" },
+    {
+      text: "API",
+      link: "/api",
+    },
+    {
+      text: "Dashboard",
+      link: "https://dashboard.cs2kz.org",
+    },
+    {
+      text: "Stats",
+      link: "https://cs2kz.org",
+    },
   ];
-}
+};
 
-function sidebar() {
+function sidebar(): DefaultTheme.SidebarItem[] {
   return [
     {
       text: "Systems",
@@ -52,4 +82,4 @@ function sidebar() {
       ],
     },
   ];
-}
+};
