@@ -1,8 +1,6 @@
 import { defineConfig } from "vitepress";
 import type { DefaultTheme } from "vitepress";
 
-import { getSidebarItems } from "./openapi";
-
 export default defineConfig({
   title: "CS2KZ Docs",
   description: "Documentation for CS2KZ",
@@ -22,10 +20,17 @@ export default defineConfig({
       "/api/": [
         {
           text: "Introduction",
-          link: "/api/"
+          link: "/api/",
         },
-        ...await getSidebarItems("/api/"),
-      ]
+        {
+          text: "Problems",
+          link: "/api/problems",
+        },
+        {
+          text: "Explorer",
+          link: "/api/explorer",
+        },
+      ],
     },
 
     socialLinks: [
@@ -44,7 +49,7 @@ function nav(): DefaultTheme.NavItem[] {
   return [
     {
       text: "API",
-      link: "/api",
+      link: "/api/",
     },
     {
       text: "Dashboard",
