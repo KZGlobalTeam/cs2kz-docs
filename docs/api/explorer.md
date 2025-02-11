@@ -5,14 +5,16 @@ sidebar: false
 ---
 
 <script setup lang="ts">
-import { watch, onMounted } from "vue";
 import { useData, useRouter } from "vitepress";
+import { watch, onMounted, onUnmounted } from "vue";
 
 const data = useData();
 const router = useRouter();
 
 const thisPage = "/api/explorer";
 const isBrowser = typeof window !== "undefined";
+
+const origFetch = isBrowser ? window.fetch : undefined;
 
 const scalarReloadReferences = "scalar:reload-references";
 const scalarUpdateReferences = "scalar:update-references-config";
@@ -24,6 +26,27 @@ const config = {
   spec: {
     url: "https://api.cs2kz.org/docs/openapi.json",
   },
+};
+
+const patchFetch = () => {
+  if (!isBrowser) {
+    return;
+  }
+
+  window.fetch = (url, options) => {
+    options ??= {};
+    options.credentials = "include";
+
+    return origFetch(url, options);
+  };
+};
+
+const restoreFetch = () => {
+  if (!isBrowser) {
+    return;
+  }
+
+  window.fetch = origFetch;
 };
 
 const updateConfig = () => {
@@ -51,6 +74,8 @@ onMounted(() => {
     return;
   }
 
+  patchFetch();
+
   const container = document.getElementById("api-reference-container");
 
   const configEl = document.createElement("script");
@@ -66,6 +91,8 @@ onMounted(() => {
   container.appendChild(configEl);
   container.appendChild(scriptEl);
 });
+
+onUnmounted(() => restoreFetch());
 
 watch(
   () => data.isDark.value,
