@@ -1,19 +1,15 @@
-import { usePaths } from "vitepress-openapi";
-
-import { getSpec } from "../../.vitepress/openapi";
+import { getPathsByVerbs } from "../../.vitepress/openapi";
 
 export default {
   async paths() {
-    const spec = await getSpec();
+    const paths = await getPathsByVerbs();
 
-    return usePaths({ spec })
-      .getPathsByVerbs()
-      .map((path) => {
-        return {
-          params: {
-            operation: path?.operationId,
-          },
-        };
-      });
+    return paths.map((path) => {
+      return {
+        params: {
+          operation: path?.operationId,
+        },
+      };
+    });
   }
 };

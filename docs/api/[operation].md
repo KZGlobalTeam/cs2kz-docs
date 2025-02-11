@@ -12,5 +12,6 @@ const operation = route.data.params.operation;
 </script>
 
 <OAOperation
+  hide-branding
   :operationId="operation"
 />

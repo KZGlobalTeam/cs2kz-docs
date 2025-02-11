@@ -6,6 +6,7 @@ import { getSidebarItems } from "./openapi";
 export default defineConfig({
   title: "CS2KZ Docs",
   description: "Documentation for CS2KZ",
+  titleTemplate: "CS2KZ | :title",
 
   head: [
     ["link", { rel: "icon", href: "/favicon.ico" }]
@@ -13,8 +14,6 @@ export default defineConfig({
 
   srcDir: "docs",
   cleanUrls: true,
-
-  titleTemplate: "CS2KZ | :title",
 
   themeConfig: {
     nav: nav(),

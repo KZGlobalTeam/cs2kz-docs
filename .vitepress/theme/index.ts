@@ -1,27 +1,20 @@
 import DefaultTheme from "vitepress/theme";
-import type { Theme } from "vitepress";
 
-import { theme, useOpenapi } from "vitepress-openapi/client";
+import { theme } from "vitepress-openapi/client";
 
 import "./style.css";
 import "vitepress-openapi/dist/style.css";
 
-import { getSpec } from "../openapi";
+import { getOpenapi } from "../openapi";
 
-const defineTheme = (theme: Theme) => theme;
-
-export default defineTheme({
+export default {
   extends: DefaultTheme,
   enhanceApp: async (ctx) => {
-    const spec = await getSpec();
-
-    const openapi = useOpenapi({
-      spec: spec,
-    });
+    const openApi = await getOpenapi();
 
     theme.enhanceApp({
       ...ctx,
-      openapi: openapi as any, // TODO: Why is this necessary
+      openapi: openApi as any, // TODO: Why is this necessary
     });
   },
-});
+};
