@@ -5,7 +5,7 @@ sidebar: false
 ---
 
 <script setup lang="ts">
-import { computed } from "vue";
+import { computed, watch } from "vue";
 import { useData, useRouter } from "vitepress";
 
 import { ApiReference, useSidebar } from "@scalar/api-reference";
@@ -14,6 +14,21 @@ const data = useData();
 const router = useRouter();
 
 const thisPage = "/api/explorer";
+
+const toggleScalarDark = (dark) => {
+  if (dark) {
+    document.body.classList.add("dark-mode");
+    document.body.classList.remove("light-mode");
+  } else {
+    document.body.classList.add("light-mode");
+    document.body.classList.remove("dark-mode");
+  }
+};
+
+watch(
+  () => data.isDark.value,
+  (isDark) => toggleScalarDark(isDark),
+);
 
 router.onAfterRouteChange = (to) => {
   const el = document.getElementById("scalar-style-api-reference");
@@ -39,12 +54,17 @@ const config = computed(() => {
 
 <ClientOnly>
   <ApiReference
-    :key="data.isDark.value"
     :configuration="config"
   />
 </ClientOnly>
 
 <style>
+.scalar-sidebar-toggle,
+.scalar-sidebar-toggle > * {
+  display: none !important;
+  padding: 0 !important;
+}
+
 .references-navigation-list {
   top: calc(var(--refs-header-height) + var(--vp-nav-height)) !important;
   height: calc(100dvh - var(--refs-header-height) - var(--vp-nav-height)) !important;
