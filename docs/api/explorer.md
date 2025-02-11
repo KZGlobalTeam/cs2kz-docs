@@ -5,25 +5,67 @@ sidebar: false
 ---
 
 <script setup lang="ts">
-import { computed, watch } from "vue";
+import { watch, onMounted } from "vue";
 import { useData, useRouter } from "vitepress";
-
-import { ApiReference, useSidebar } from "@scalar/api-reference";
 
 const data = useData();
 const router = useRouter();
 
 const thisPage = "/api/explorer";
+const isBrowser = typeof window !== "undefined";
+
+const scalarReloadReferences = "scalar:reload-references";
+const scalarUpdateReferences = "scalar:update-references-config";
+
+const config = {
+  hideClientButton: true,
+  hideDarkModeToggle: true,
+  forceDarkModeState: data.isDark.value ? "dark" : "light",
+  spec: {
+    url: "https://api.cs2kz.org/docs/openapi.json",
+  },
+};
+
+const updateConfig = () => {
+  const ev = new CustomEvent(scalarUpdateReferences, {
+    detail: {
+      configuration: config
+    },
+  });
+
+  document.dispatchEvent(ev);
+  document.dispatchEvent(new Event(scalarReloadReferences));
+};
 
 const toggleScalarDark = (dark) => {
-  if (dark) {
-    document.body.classList.add("dark-mode");
-    document.body.classList.remove("light-mode");
-  } else {
-    document.body.classList.add("light-mode");
-    document.body.classList.remove("dark-mode");
+  if (!isBrowser) {
+    return;
   }
+
+  config.forceDarkModeState = dark ? "dark" : "light";
+  return updateConfig();
 };
+
+onMounted(() => {
+  if (!isBrowser) {
+    return;
+  }
+
+  const container = document.getElementById("api-reference-container");
+
+  const configEl = document.createElement("script");
+  configEl.id = "api-reference";
+  configEl.type = "application/json";
+  configEl.dataset.configuration = JSON.stringify(config);
+
+  const scriptEl = document.createElement("script");
+  scriptEl.id = "scalar";
+  scriptEl.src = "https://cdn.jsdelivr.net/npm/@scalar/api-reference@1.25.116";
+  scriptEl.async = true;
+
+  container.appendChild(configEl);
+  container.appendChild(scriptEl);
+});
 
 watch(
   () => data.isDark.value,
@@ -31,32 +73,12 @@ watch(
 );
 
 router.onAfterRouteChange = (to) => {
-  const el = document.getElementById("scalar-style-api-reference");
-  if (!el) {
-    return;
-  }
-
-  // Disable Scalar styles when navigating away
-  el.disabled = (to !== thisPage);
+  // Scalar mutates elements, so reload now to revert
+  (to !== thisPage) && location.reload();
 };
-
-const config = computed(() => {
-  return {
-    hideClientButton: true,
-    hideDarkModeToggle: true,
-    forceDarkModeState: data.isDark.value ? "dark" : "light",
-    spec: {
-      url: "https://api.cs2kz.org/docs/openapi.json",
-    },
-  };
-});
 </script>
 
-<ClientOnly>
-  <ApiReference
-    :configuration="config"
-  />
-</ClientOnly>
+<div id="api-reference-container"></div>
 
 <style>
 .scalar-sidebar-toggle,

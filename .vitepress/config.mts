@@ -12,6 +12,7 @@ export default defineConfig({
 
   srcDir: "docs",
   cleanUrls: true,
+  metaChunk: true,
 
   themeConfig: {
     nav: nav(),
