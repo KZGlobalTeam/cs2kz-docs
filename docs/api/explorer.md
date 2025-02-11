@@ -43,7 +43,7 @@ const patchFetch = () => {
   }
 
   window.fetch = (url, options) => {
-    const u = safeUrl(url);
+    const u = safeURL(url);
     if (!u) {
       return origFetch(url, options);
     }
