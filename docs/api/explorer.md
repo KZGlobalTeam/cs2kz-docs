@@ -28,12 +28,34 @@ const config = {
   },
 };
 
+const safeURL = (href) => {
+  try {
+    const url = new URL(href);
+    return url;
+  } catch {
+    return undefined;
+  }
+};
+
 const patchFetch = () => {
   if (!isBrowser) {
     return;
   }
 
   window.fetch = (url, options) => {
+    const u = safeUrl(url);
+    if (!u) {
+      return origFetch(url, options);
+    }
+
+    if (u.origin !== "https://api.cs2kz.org") {
+      return origFetch(url, options);
+    }
+
+    if (!u.pathname.startsWith("/auth")) {
+      return origFetch(url, options);
+    }
+
     options ??= {};
     options.credentials = "include";
 
