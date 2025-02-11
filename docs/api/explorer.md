@@ -16,18 +16,13 @@ const router = useRouter();
 const thisPage = "/api/explorer";
 
 router.onAfterRouteChange = (to) => {
-  let el = document.getElementById("scalar-style-api-reference");
-  if (el) {
-    el.disabled = (to !== thisPage);
+  const el = document.getElementById("scalar-style-api-reference");
+  if (!el) {
     return;
   }
 
-  el = document.createElement("link");
-  el.id = "scalar";
-  el.rel = "stylesheet";
-  el.href = "node_modules/@scalar/api-reference/style.css";
-
-  document.head.appendChild(el);
+  // Disable Scalar styles when navigating away
+  el.disabled = (to !== thisPage);
 };
 
 const config = computed(() => {
