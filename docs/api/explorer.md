@@ -42,24 +42,24 @@ const patchFetch = () => {
     return;
   }
 
-  window.fetch = (url, options) => {
-    const u = safeURL(url);
-    if (!u) {
-      return origFetch(url, options);
+  window.fetch = (request, options) => {
+    const url = safeURL(request.url);
+    if (!url) {
+      return origFetch(request, options);
     }
 
-    if (u.origin !== "https://api.cs2kz.org") {
-      return origFetch(url, options);
+    if (url.origin !== "https://api.cs2kz.org") {
+      return origFetch(request, options);
     }
 
-    if (!u.pathname.startsWith("/auth")) {
-      return origFetch(url, options);
+    if (!url.pathname.startsWith("/auth")) {
+      return origFetch(request, options);
     }
 
     options ??= {};
     options.credentials = "include";
 
-    return origFetch(url, options);
+    return origFetch(request, options);
   };
 };
 
