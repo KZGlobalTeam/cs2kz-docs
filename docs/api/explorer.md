@@ -1,4 +1,5 @@
 ---
+title: API - Explorer
 layout: page
 sidebar: false
 ---
@@ -12,10 +13,12 @@ import { ApiReference, useSidebar } from "@scalar/api-reference";
 const data = useData();
 const router = useRouter();
 
+const thisPage = "/api/explorer";
+
 router.onAfterRouteChange = (to) => {
   let el = document.getElementById("scalar-style-api-reference");
   if (el) {
-    el.disabled = (to !== "/api/explorer");
+    el.disabled = (to !== thisPage);
     return;
   }
 
@@ -31,7 +34,6 @@ const config = computed(() => {
   return {
     hideClientButton: true,
     hideDarkModeToggle: true,
-    defaultOpenAllTags: true,
     forceDarkModeState: data.isDark.value ? "dark" : "light",
     spec: {
       url: "https://api.cs2kz.org/docs/openapi.json",
@@ -40,12 +42,10 @@ const config = computed(() => {
 });
 </script>
 
-<ClientOnly>
-  <ApiReference
-    :key="data.isDark.value"
-    :configuration="config"
-  />
-</ClientOnly>
+<ApiReference
+  :key="data.isDark.value"
+  :configuration="config"
+/>
 
 <style>
 .references-navigation-list {

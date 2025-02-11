@@ -49,7 +49,7 @@ function nav(): DefaultTheme.NavItem[] {
   return [
     {
       text: "API",
-      link: "/api",
+      link: "/api/",
     },
     {
       text: "Dashboard",

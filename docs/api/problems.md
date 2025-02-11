@@ -1,5 +1,5 @@
 ---
-title: API
+title: API - Problems
 ---
 
 # CS2KZ API problems
