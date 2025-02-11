@@ -1,1 +1,0 @@
-import{_ as t,c as a,ak as i,o}from"./chunks/framework.WrVN381V.js";const p=JSON.parse('{"title":"Maps","description":"","frontmatter":{},"headers":[],"relativePath":"systems/maps.md","filePath":"systems/maps.md"}'),r={name:"systems/maps.md"};function s(l,e,n,d,u,c){return o(),a("div",null,e[0]||(e[0]=[i("",22)]))}const m=t(r,[["render",s]]);export{p as __pageData,m as default};
