@@ -42,10 +42,12 @@ const config = computed(() => {
 });
 </script>
 
-<ApiReference
-  :key="data.isDark.value"
-  :configuration="config"
-/>
+<ClientOnly>
+  <ApiReference
+    :key="data.isDark.value"
+    :configuration="config"
+  />
+</ClientOnly>
 
 <style>
 .references-navigation-list {
