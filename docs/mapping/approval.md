@@ -82,6 +82,8 @@ Rules that apply to every map:
    - performance optimizations
    - reasonable file size
 - A "jumpstats" area featuring LJ blocks from 210-280, in increments of 10
+   - There must be a trigger that allows for teleporting to this area via
+     `!lj`.
 - Discriminatory, obscene, or sexually explicit content are **strictly
   prohibited**.
 - Any course with filters intended to be ranked must be completed at least once
@@ -89,9 +91,13 @@ Rules that apply to every map:
 
 Rules that apply to courses with ranked filters specifically:
 
+- Avoid using clips, non-solid blocks, triggers, or moving blocks in
+  unintuitive or exploitable ways.
 - Avoid inconsistent mechanics like moving platforms or time-based events.
 - Avoid "pre-run setups" like breakable objects or doors which do not open
   automatically.
+- There must be no way to skip from the start of a course straight to the end,
+  resulting in ridiculously short times.
 
 In addition, the *name* of your maps must start with `kz_` and can only contain
 ASCII alphanumeric characters (and underscores). It should be easily
