@@ -15,22 +15,67 @@ export default defineConfig({
   metaChunk: true,
 
   themeConfig: {
-    nav: nav(),
+    nav: [
+      {
+        text: "Stats",
+        link: "https://cs2kz.org",
+      },
+      {
+        text: "Dashboard",
+        link: "https://dashboard.cs2kz.org",
+      },
+      {
+        text: "API",
+        link: "/api/",
+      },
+    ],
+
     sidebar: {
-      "/": sidebar(),
+      "/": [
+        {
+          items: [
+            { text: "Modes", link: "/modes" },
+            { text: "Styles", link: "/styles" },
+            { text: "Mapping", link: "/mapping" },
+            { text: "Servers", link: "/servers" },
+            { text: "Ranking", link: "/ranking" },
+          ],
+        },
+        {
+          text: "Mapping",
+          items: [
+            { text: "Approval Process", link: "/mapping/approval" },
+            { text: "Discord", link: "https://discord.gg/R593VhE" },
+          ],
+        },
+        {
+          text: "Servers",
+          items: [
+            { text: "Approval Process", link: "/servers/approval" },
+            { text: "LAN Setup", link: "/servers/lan" },
+          ],
+        },
+        {
+          text: "Resources",
+          items: [
+            { text: "Differences from GOKZ", link: "/gokz" },
+            { text: "GlobalAPI Documentation", link: "/api" },
+          ],
+        },
+      ],
+      "/mapping/": [
+        { text: "Terminology", link: "/mapping/" },
+        { text: "Approval Process", link: "/mapping/approval" },
+        { text: "Discord", link: "https://discord.gg/R593VhE" },
+      ],
+      "/servers/": [
+        { text: "Approval Process", link: "/servers/approval" },
+        { text: "LAN Setup", link: "/servers/lan" },
+      ],
       "/api/": [
-        {
-          text: "Introduction",
-          link: "/api/",
-        },
-        {
-          text: "Problems",
-          link: "/api/problems",
-        },
-        {
-          text: "Explorer",
-          link: "/api/explorer",
-        },
+        { text: "Introduction", link: "/api/" },
+        { text: "Explorer", link: "/api/explorer" },
+        { text: "Problems", link: "/api/problems" },
       ],
     },
 
@@ -45,46 +90,3 @@ export default defineConfig({
     },
   },
 });
-
-function nav(): DefaultTheme.NavItem[] {
-  return [
-    {
-      text: "API",
-      link: "/api/",
-    },
-    {
-      text: "Dashboard",
-      link: "https://dashboard.cs2kz.org",
-    },
-    {
-      text: "Stats",
-      link: "https://cs2kz.org",
-    },
-  ];
-};
-
-function sidebar(): DefaultTheme.SidebarItem[] {
-  return [
-    {
-      text: "Systems",
-      items: [
-        { text: "Modes", link: "/systems/modes" },
-        { text: "Maps", link: "/systems/maps" },
-        { text: "Points", link: "/systems/points" },
-        { text: "Styles", link: "/systems/styles" },
-      ],
-    },
-    {
-      text: "Servers",
-      items: [
-        { text: "LAN Server Setup", link: "/servers/lan" },
-      ],
-    },
-    {
-      text: "Creator resources",
-      items: [
-        { text: "Map Approval Process", link: "/mapping/approval" },
-      ],
-    },
-  ];
-};

@@ -1,20 +1,107 @@
-# Map approval process
+# Map Approval
 
-The map approval process structure will closely resemble GOKZ, with a few key details still to be finalized:
+If you want your own map to become part of
+[the official map pool](https://cs2kz.org/maps), you need
+[permission](#acquiring-permission) to do so,
+[submit it for approval](#creating-a-map), and make sure it follows
+[the rules](#rules).
 
-## 1. Submission
+## Acquiring Permission
 
-- **Uploading:** Mappers submit their maps via the [CS2 Steam Workshop](https://steamcommunity.com/app/730/workshop).
-- **Course Requirements:** Each map must contain at least one course with a filter of tier 8 or lower, to be considered for ranking.
+>[!NOTE]
+> This step only has to be performed *once*; not for every map.
 
-## 2. Review
+Visit [the forum](https://forum.cs2kz.org) and create a new post in the "Map
+Approval" category with the "Approval Permission" tag. The post should include
+a link to your Steam profile and a short introduction about who you are, your
+connection to KZ, and whether you have any existing maps (ideally on your
+workshop).
 
-- **Approval Team:** A group of experienced KZ community members will review the map. They are responsible for evaluating the course
-difficulty, ranking potential, and adherence to community standards.
-- **Objective Evaluation:** Maps will be assessed on objective metrics such as difficulty, design, and gameplay quality.
-- **Subjective Evaluation:** The team will also consider whether the course is "reasonable to compete on," allowing for some flexibility and creative expression in map design.
+>[!NOTE]
+> This post will be private between you and the map approval team.
 
-## 3. Publication
+Once you have been accepted, you can log into
+[the dashboard](https://dashboard.cs2kz.org) and submit maps. Please keep in
+mind that this is a **privilege** and that if you break any rules or otherwise
+abuse your power, it will be taken away from you.
 
-- Once approved, the map is added to the global KZ pool. It will then be available for players to compete on in ranked or unranked settings,
- depending on the course's filter.
+## Creating a Map
+
+Once you have created a map (in Hammer), you may also create it on
+[the dashboard](https://dashboard.cs2kz.org). Maps will transition between
+[different states](#map-states) over time, and newly created maps start out in
+the "WIP" state.
+
+### Map States
+
+Newly submitted maps will start out in the "WIP" state. In this state you can
+gather player feedback, for example by making a forum post and/or joining
+[the Mapping Discord](https://discord.gg/R593VhE). While players _can_ submit
+records during this phase, leaderboards will be reset whenever the map is
+updated.
+
+>[!NOTE]
+> In order to update a map you have to update it both on the workshop and the
+> dashboard.
+
+If a map remains without updates for ~2 months it will transition into the
+"Graveyard" state where it will remain until you update it again.
+
+Once you are happy with your creation you may submit it for approval. You do
+this by updating its state to "Submitted" on the dashboard and then creating
+another forum post in the "Map Approval" category with the "Submission" tag.
+
+>[!NOTE]
+> This post will be publicly visible, but only you and the map approval team
+> will be able to comment on it.
+
+>[!WARNING]
+> Once your map is in the "Submitted" state, you will no longer be able to
+> update it.
+
+If your map is accepted it will transition into the "Approved" state where it
+will remain frozen.
+
+If your map is rejected it will transition back into the "WIP" state and you
+can choose to either continue your work on it and re-submit for approval, or
+leave it as is. If you decide that your map is complete, and you don't want it
+to disappear into the sea of "Graveyard" maps, you can update its state on the
+dashboard to "Complete". This will, just like "Approved", freeze your map from
+further updates, but it will be more visible to players searching for new maps
+to play.
+
+## Rules
+
+- At least one course must be present on the map.
+- At least one filter must have the goal of being ranked.
+- A display of effort and quality
+   - fully textured
+   - good lighting and visibility
+   - performance optimizations
+   - reasonable file size
+- A "jumpstats" area featuring LJ blocks from 210-280, in increments of 10
+- Discriminatory, obscene, or sexually explicit content are **strictly
+  prohibited**.
+- Any course with filters intended to be ranked must be completed at least once
+  on said filter while the map is in the WIP state.
+- Avoid inconsistent mechanics like moving platforms or time-based events.
+- Avoid "pre-run setups" like breakable objects or doors which do not open
+  automatically.
+
+In addition, the *name* of your maps must start with `kz_` and can only contain
+ASCII alphanumeric characters (and underscores). It should be easily
+distinguishable from other maps.
+
+Course names follow the same rules except that they should **not** have the
+`kz_` prefix.
+
+## Porting
+
+Map "porting" refers to the process of taking an existing map, for example from
+CS:GO, and updating it to CS2. There are extra rules for these maps:
+
+- Either you are the original mapper, or the original mapper must give you
+  explicit permission to port their map.
+   - If you are not the original mapper, the original mapper has been inactive
+     for 2+ years, and you have made honest attempts to conatact them (but
+     failed) you may also be allowed to port their maps.
