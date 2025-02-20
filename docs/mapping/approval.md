@@ -72,6 +72,8 @@ to play.
 
 ## Rules
 
+Rules that apply to every map:
+
 - At least one course must be present on the map.
 - At least one filter must have the goal of being ranked.
 - A display of effort and quality
@@ -84,6 +86,9 @@ to play.
   prohibited**.
 - Any course with filters intended to be ranked must be completed at least once
   on said filter while the map is in the WIP state.
+
+Rules that apply to courses with ranked filters specifically:
+
 - Avoid inconsistent mechanics like moving platforms or time-based events.
 - Avoid "pre-run setups" like breakable objects or doors which do not open
   automatically.
@@ -98,10 +103,8 @@ Course names follow the same rules except that they should **not** have the
 ## Porting
 
 Map "porting" refers to the process of taking an existing map, for example from
-CS:GO, and updating it to CS2. There are extra rules for these maps:
-
-- Either you are the original mapper, or the original mapper must give you
-  explicit permission to port their map.
-   - If you are not the original mapper, the original mapper has been inactive
-     for 2+ years, and you have made honest attempts to conatact them (but
-     failed) you may also be allowed to port their maps.
+CS:GO, and updating it to CS2. If you plan on porting a map and submitting it,
+and you are not the original mapper, you must get permission from the original
+mapper to port their map. If the original mapper has been inactive for 2 years
+or longer, and you have made honest (but unsuccessful) attempts to contact
+them, you may submit your port anyway.
