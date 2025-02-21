@@ -4,7 +4,7 @@ If you want your own map to become part of
 [the official map pool](https://cs2kz.org/maps), you need
 [permission](#acquiring-permission) to do so,
 [submit it for approval](#creating-a-map), and make sure it follows
-[the rules](#rules).
+[the rules](#rules). If you plan on porting a map, see
 
 ## Acquiring Permission
 
@@ -99,8 +99,8 @@ Rules that apply to courses with ranked filters specifically:
 - There must be no way to skip from the start of a course straight to the end,
   resulting in ridiculously short times.
 
-In addition, the *name* of your maps must start with `kz_` and can only contain
-ASCII alphanumeric characters (and underscores). It should be easily
+In addition, the *names* of your maps must start with `kz_` and can only
+contain ASCII alphanumeric characters (and underscores). It should be easily
 distinguishable from other maps.
 
 Course names follow the same rules except that they should **not** have the
