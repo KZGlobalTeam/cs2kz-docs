@@ -44,6 +44,7 @@ export default defineConfig({
         {
           text: "Mapping",
           items: [
+            { text: "API", link: "/mapping/api" },
             { text: "Approval Process", link: "/mapping/approval" },
             { text: "Discord", link: "https://discord.gg/R593VhE" },
           ],
@@ -65,6 +66,7 @@ export default defineConfig({
       ],
       "/mapping/": [
         { text: "Terminology", link: "/mapping/" },
+        { text: "API", link: "/mapping/api" },
         { text: "Approval Process", link: "/mapping/approval" },
         { text: "Discord", link: "https://discord.gg/R593VhE" },
       ],
