@@ -259,7 +259,7 @@ Activates multiple different modifiers for the player.
 
 #### `KZ | Trigger Type`: `Anti Bhop`
 
-Optionally change Time in the `KZ | Anti Bhop` section: a delay of `0` means
+Optionally change `Time` in the `KZ | Anti Bhop` section: a delay of `0` means
 that jumping is always disabled in this trigger. The delay timer starts when
 you're on the ground inside the trigger.
 
