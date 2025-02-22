@@ -13,8 +13,8 @@ The timer starts when the player leaves the start zone and ends when the player
 enters the end zone. You can create these zones like so:
 
 1. Create a [`trigger_multiple`](https://developer.valvesoftware.com/wiki/Trigger_multiple) entity.
-2. Name the start zone entity `timer_startzone`.
-3. Name the end zone entity `timer_endzone`.
+2. Set the start zone entity's `Name` (targetname) to `timer_startzone`.
+3. Set the end zone entity's `Name` (targetname) to `timer_endzone`.
 
 It is recommended that you use triggers that are 4 units thick and on the
 ground for more consistent timing.
@@ -39,7 +39,7 @@ Course starts mark where players will be teleported when using the `!restart`
 To implement course starts, the following are required:
 
 1. Create an [`info_teleport_destination`](https://developer.valvesoftware.com/wiki/Info_teleport_destination) entity.
-2. Name the entity `timer_start`.
+2. Set the entity's `Name` (targetname) to `timer_start`.
 3. Set Pitch Yaw Roll (Y Z X) to the angles you wish to teleport the player
    into.
 
@@ -55,7 +55,7 @@ There can only be one of these in a map. This works with or without the FGD.
 To implement the jumpstat area location, the following are required:
 
 1. Create an [`info_teleport_destination`](https://developer.valvesoftware.com/wiki/Info_teleport_destination) entity.
-2. Name the entity `timer_jumpstat_area`.
+2. Set the entity's `Name` (targetname) to `timer_jumpstat_area`.
 3. Set Pitch Yaw Roll (Y Z X) to the angles you wish to teleport the player
    into.
 
@@ -100,7 +100,8 @@ To make a course descriptor:
 
 1. Create an `info_target_server_only` entity.
 2. Enable the `KZ | Is Course Descriptor` checkbox.
-3. Name the entity so other entities can find it (e.g. `binguscourse`).
+3. Set the entity's `Name` (targetname) to something other entities can find
+   (e.g. `binguscourse`).
 4. Give the course a nice `Course Name` under the `KZ | Course Descriptor`
    tree, for example `Best Bingus Bever`. This will be shown in-game to
    players, so pick a good one! If your map has only one course you should name
@@ -118,11 +119,9 @@ player enters the end zone (and has touched every "stage" and "checkpoint" zone
 assigned to the course).
 
 1. Create a [`trigger_multiple`](https://developer.valvesoftware.com/wiki/Trigger_multiple) entity.
-2. For the start zone, select `Start Zone` from the `KZ | Trigger Type`
-   dropdown.
-3. For the end zone, select `End Zone` from the `KZ | Trigger Type`
-   dropdown.
-4. Expaned the `KZ | Zone` tree and put the `targetname` of your course
+2. For start zones, select `Start Zone` from the `KZ | Trigger Type` dropdown.
+3. For end zones, select `End Zone` from the `KZ | Trigger Type` dropdown.
+4. Expand the `KZ | Zone` tree and put the targetname of your course
    descriptor entity in `Course Descriptor` (e.g. `binguscourse`).
 
 ![zones](/public/images/zones.png)
@@ -162,7 +161,7 @@ single stage zone in order.
 1. Create a [`trigger_multiple`](https://developer.valvesoftware.com/wiki/Trigger_multiple) entity.
 2. Select `Split Zone` / `Checkpoint Zone` / `Stage Zone` from the
    `KZ | Trigger Type` dropdown.
-3. Expand the `KZ | Zone` tree and put the `targetname` of your course
+3. Expand the `KZ | Zone` tree and put the targetname of your course
    descriptor entity in `Course Descriptor` (e.g. `binguscourse`).
 4. Then, if this isn't the first split / checkpoint / stage zone you're making,
    increment the `Split/Checkpoint/Stage Number` by 1.
