@@ -1,11 +1,11 @@
 # Mapping API
 
-The Mapping API was designed with using the [Mapping API FGD][fdg] in
+The Mapping API was designed with using the [Mapping API FGD][fgd] in
 mind. Some features are available without the FGD, like a basic start and end
 zone (only 1 course without the FGD), course start position, and jumpstat area
 location.
 
-## Features available without the FDG
+## Features available without the FGD
 
 ### Timer Zones
 
@@ -21,8 +21,8 @@ ground for more consistent timing.
 
 Some things to keep in mind:
 
-- When using the FDG this method will not work!
-- You can only create this one course without the FDG.
+- When using the FGD this method will not work!
+- You can only create this one course without the FGD.
 - Start zones can be left mid-air as long as a perfect bunnyhop is not hit.
 
 ### Course Starts
@@ -59,10 +59,10 @@ To implement the jumpstat area location, the following are required:
 3. Set Pitch Yaw Roll (Y Z X) to the angles you wish to teleport the player
    into.
 
-## Features available only with the FDG
+## Features available only with the FGD
 
 For the following features you will need the
-[Mapping API FGD (`csgo_internal.fgd`) file][fdg].
+[Mapping API FGD (`csgo_internal.fgd`) file][fgd].
 
 After opening the above link for the `.fgd`, right click on the page and click
 "Save As" and save it to somewhere safe. Make sure to change the file extension
@@ -279,4 +279,4 @@ Disables jumping while on the ground and in the trigger.
 
 ![anti-bhop-trigger](/public/images/anti-bhop-trigger.png)
 
-[fdg]: https://github.com/KZGlobalTeam/cs2kz-metamod/blob/master/mapping_api/game/csgo_core/csgo_internal.fgd
+[fgd]: https://github.com/KZGlobalTeam/cs2kz-metamod/blob/master/mapping_api/game/csgo_core/csgo_internal.fgd
