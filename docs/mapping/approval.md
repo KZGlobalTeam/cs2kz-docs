@@ -99,12 +99,24 @@ Rules that apply to courses with ranked filters specifically:
 - There must be no way to skip from the start of a course straight to the end,
   resulting in ridiculously short times.
 
-In addition, the *names* of your maps must start with `kz_` and can only
-contain ASCII alphanumeric characters (and underscores). It should be easily
+In addition, the *names* of your maps must start with `kz_`, can only contain
+ASCII alphanumeric characters (and underscores), and must not exceed 27
+characters in length (including the `kz_` prefix). It should be easily
 distinguishable from other maps.
 
-Course names follow the same rules except that they should **not** have the
-`kz_` prefix.
+>[!NOTE]
+> The 27 character limit exists because of how command parsing is implemented
+> in the game engine. Any command must fit into 63 characters (the buffer is 64
+> characters, but the last character is a `\0` terminator). The two available
+> commands to change map are `map` and `changelevel`. The argument to these
+> commands is the path to the map file, which usually looks like this:
+> `workshop/<id>.bsp`, with `<id>` being an unsigned 32-bit integer. Therefore,
+> the longest possible command, without an actual map name, is `changelevel
+> workshop/4294967295/.bsp`. This is 36 characters long, leaving 27 characters
+> for the map name, to reach the limit of 63.
+
+Course names can only contain ASCII characters (including spaces, punctuation,
+quotes, etc.) and must be unique across all courses **on your map**.
 
 ## Porting
 
