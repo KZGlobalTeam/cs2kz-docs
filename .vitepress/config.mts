@@ -5,6 +5,7 @@ export default defineConfig({
   title: "CS2KZ Docs",
   description: "Documentation for CS2KZ",
   titleTemplate: "CS2KZ | :title",
+  base: "/cs2kz-docs/",
 
   head: [
     ["link", { rel: "icon", href: "/favicon.ico" }]
@@ -84,6 +85,7 @@ function sidebar(): DefaultTheme.SidebarItem[] {
       text: "Creator resources",
       items: [
         { text: "Map Approval Process", link: "/mapping/approval" },
+        { text: "Mapping for CS2KZ", link: "/mapping/mapping" },
       ],
     },
   ];
