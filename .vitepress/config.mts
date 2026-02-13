@@ -5,7 +5,6 @@ export default defineConfig({
   title: "CS2KZ Docs",
   description: "Documentation for CS2KZ",
   titleTemplate: "CS2KZ | :title",
-  base: "/cs2kz-docs/",
 
   head: [
     ["link", { rel: "icon", href: "/favicon.ico" }]
