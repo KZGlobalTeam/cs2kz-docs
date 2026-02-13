@@ -1,5 +1,5 @@
 <div style="text-align: center;">
-  <img src="/kzmapping.png" alt="Mapping" style="max-width: 700px; display: block; margin: 0 auto 20px;">
+  <img src="/mapping/kzmapping.png" alt="Mapping" style="max-width: 700px; display: block; margin: 0 auto 20px;">
 </div>
 
 # Mapping for CS2KZ
@@ -16,11 +16,11 @@ Avoid employing a "jumps along a wall" design where the player simply follows a 
 
 <div style="display: flex; gap: 5px;">
   <div style="flex: 1;">
-    <img src="/insomniano.jpg" alt="Barren kz_insomnia" style="width: 100%; display: block;">
+    <img src="/mapping/insomniano.jpg" alt="Barren kz_insomnia" style="width: 100%; display: block;">
     <p style="text-align: center; margin: 10px 0;"><em>1. Barren kz_insomnia</em></p>
   </div>
   <div style="flex: 1;">
-    <img src="/insomniayes.jpg" alt="Detailed kz_insomnia" style="width: 100%; display: block;">
+    <img src="/mapping/insomniayes.jpg" alt="Detailed kz_insomnia" style="width: 100%; display: block;">
     <p style="text-align: center; margin: 10px 0;"><em>2. Detailed kz_insomnia</em></p>
   </div>
 </div>
@@ -38,7 +38,7 @@ Maintaining a clean workflow saves you from a lot of troubleshooting later.
 > - When working with a mesh work you may encounter red edges. This means you have "bad" faces. Right click a nearby face and ``Remove Bad Faces`` to resolve.
 
 <div style="text-align: center;">
-  <img src="/badfaces.png" alt="Bad faces" style="max-width: 400px; display: block; margin: 0 auto;">
+  <img src="/mapping/badfaces.png" alt="Bad faces" style="max-width: 400px; display: block; margin: 0 auto;">
   <p style="margin: 10px 0;"><em>3. Bad faces caused by improper mesh work.</em></p>
 </div>
 
@@ -60,11 +60,11 @@ In shaded areas of your map, it may be necessary to incorporate a secondary ligh
 
 <div style="display: flex; gap: 5px;">
   <div style="flex: 1;">
-    <img src="/badlight.jpg" alt="Bad lighting" style="width: 100%; display: block;">
+    <img src="/mapping/badlight.jpg" alt="Bad lighting" style="width: 100%; display: block;">
     <p style="text-align: center; margin: 10px 0;"><em>4. Bad lighting</em></p>
   </div>
   <div style="flex: 1;">
-    <img src="/goodlight.jpg" alt="Good lighting" style="width: 100%; display: block;">
+    <img src="/mapping/goodlight.jpg" alt="Good lighting" style="width: 100%; display: block;">
     <p style="text-align: center; margin: 10px 0;"><em>5. Good lighting</em></p>
   </div>
 </div>
@@ -74,7 +74,7 @@ Adjusting the luminosity/brightness/fade of your lights will help to make your l
 When testing your lights, changing your 3d view port to **GPU Reference Path Tracing** will provide a real-time raytraced preview of the lighting and reflections of your map in Hammer. This will allow you to adjust your lights without compiling your map. With that said, **3d All Lighting** tends to present shadows more accurately.
 
 <div style="text-align: center;">
-  <img src="/gpupathtracing.png" alt="GPUPathTracing" style="max-width: 400px; display: block; margin: 0 auto;">
+  <img src="/mapping/gpupathtracing.png" alt="GPUPathTracing" style="max-width: 400px; display: block; margin: 0 auto;">
   <p style="margin: 10px 0;"><em>6. Enabling GPU Path Tracing in the viewport</em></p>
 </div>
 
@@ -82,7 +82,7 @@ When testing your lights, changing your 3d view port to **GPU Reference Path Tra
 > - Light and shadows may occasionally bleed through both merged and unmerged edges. This is a bug which often occurs for faces with sharp angles (less than 45 degrees), although it can also occur without an apparent cause.
 
 <div style="text-align: center;">
-  <img src="/lightbleed.png" alt="Light bleed" style="max-width: 400px; display: block; margin: 0 auto;">
+  <img src="/mapping/lightbleed.png" alt="Light bleed" style="max-width: 400px; display: block; margin: 0 auto;">
   <p style="margin: 10px 0;"><em>7. Light bleed caused by unknown factor</em></p>
 </div>
 
@@ -91,7 +91,7 @@ When testing your lights, changing your 3d view port to **GPU Reference Path Tra
 The lightmap resolution of your map can have a significant impact on the outcome of your map’s lighting. Best practice is to always do a **final compile** for your map which by default is set to 2048 resolution. Below this resolution you are more likely to encounter lighting artifacts, especially in darker areas of the map. In larger maps with more light space it may be necessary to compile your map at a lightmap resolution higher than 2048.
 
 <div style="text-align: center;">
-  <img src="/lightartifacting.jpg" alt="Artifacting" style="max-width: 600px; display: block; margin: 0 auto;">
+  <img src="/mapping/lightartifacting.jpg" alt="Artifacting" style="max-width: 600px; display: block; margin: 0 auto;">
   <p style="margin: 10px 0;"><em>8. Lighting artifacts due to low lightmap resolution</em></p>
 </div>
 
@@ -102,7 +102,7 @@ With this in mind you also want to avoid calculating lighting for areas of the m
 > - Unexpected edges or lines on a surface, discolored textures and shadows without visible sources may indicate that a higher lightmap resolution is required.
 
 <div style="text-align: center;">
-  <img src="/lines.png" alt="VisibleEdges" style="max-width: 400px; display: block; margin: 0 auto;">
+  <img src="/mapping/lines.png" alt="VisibleEdges" style="max-width: 400px; display: block; margin: 0 auto;">
   <p style="margin: 10px 0;"><em>9. Edge on a surface clearly visible</em></p>
 </div>
 
@@ -115,15 +115,15 @@ Light probes and cubemaps are required for your map and can be incorporated simu
 
 <div style="display: flex; gap: 5px;">
   <div style="flex: 1;">
-    <img src="/noprobe.jpg" alt="Present light probe" style="width: 80%; display: block; margin: 0 auto;">
+    <img src="/mapping/noprobe.jpg" alt="Present light probe" style="width: 80%; display: block; margin: 0 auto;">
     <p style="text-align: center; margin: 10px 0;"><em>10. ECLPV absent</em></p>
   </div>
   <div style="flex: 1;">
-    <img src="/almostprobe.jpg" alt="Absent light probe" style="width: 80%; display: block; margin: 0 auto;">
+    <img src="/mapping/almostprobe.jpg" alt="Absent light probe" style="width: 80%; display: block; margin: 0 auto;">
     <p style="text-align: center; margin: 10px 0;"><em>11. ECLPV present, but improper edge fade</em></p>
   </div> 
   <div style="flex: 1;">
-    <img src="/yesprobe.jpg" alt="Absent light probe" style="width: 80%; display: block; margin: 0 auto;">
+    <img src="/mapping/yesprobe.jpg" alt="Absent light probe" style="width: 80%; display: block; margin: 0 auto;">
     <p style="text-align: center; margin: 10px 0;"><em>12. ECLPV present</em></p>
   </div>
 </div>
@@ -134,17 +134,17 @@ To implement lightprobes and cubemaps you should aim to place an [`env_combined_
 In some instances a seam will appear between two ECLPVs due to a difference between the lighting of each room. To soften the transition between the ECLPVs, within the object properties assign an edge fade distance of 8 or 16 units (image 13). When applying edge fade, ensure the ECLPV edges overlap by twice the distance of your edge fade distance to maintain a smooth blend (image 15).  
 
 <div style="text-align: center;">
-  <img src="/fadeprio.png" alt="FadeAndPriority" style="max-width: 600px; display: block; margin: 0 auto;">
+  <img src="/mapping/fadeprio.png" alt="FadeAndPriority" style="max-width: 600px; display: block; margin: 0 auto;">
   <p style="margin: 10px 0;"><em>13. Combined light probe with fade and priority</em></p>
 </div> 
 
 <div style="display: flex; gap: 15px;">
   <div style="flex: 1;">
-    <img src="/nofade.gif" alt="Fade" style="width: 100%; display: block;">
+    <img src="/mapping/nofade.gif" alt="Fade" style="width: 100%; display: block;">
     <p style="text-align: center; margin: 10px 0;"><em>14. ECLPV without fade or overlap</em></p>
   </div>
   <div style="flex: 1;">
-    <img src="/yesfade.gif" alt="No fade" style="width: 100%; display: block;">
+    <img src="/mapping/yesfade.gif" alt="No fade" style="width: 100%; display: block;">
     <p style="text-align: center; margin: 10px 0;"><em>15. ECLPV with fade and overlap</em></p>
   </div> 
 </div>
@@ -152,7 +152,7 @@ In some instances a seam will appear between two ECLPVs due to a difference betw
 When placing ECLPVs near walls, floors, or ceilings, extend the boundaries so the edge fade overlaps these surfaces. If the fade ends exactly at the wall, the lighting influence drops to zero, and the surface won't receive proper reflections or bounce light (image 11).
 
 <div style="text-align: center;">
-  <img src="/lightprobe.png" alt="Artifacting" style="max-width: 600px; display: block; margin: 0 auto;">
+  <img src="/mapping/lightprobe.png" alt="Artifacting" style="max-width: 600px; display: block; margin: 0 auto;">
   <p style="margin: 10px 0;"><em>16. ECLPVs encapsulating the rooms with edge fade and overlap</em></p>
 </div>
 
@@ -160,7 +160,7 @@ Irregularly shaped rooms often force ECLPVs to overlap awkwardly through walls i
 
 
 <div style="text-align: center;">
-  <img src="/probepuzzle.png" alt="Probepuzzle" style="max-width: 600px; display: block; margin: 0 auto;">
+  <img src="/mapping/probepuzzle.png" alt="Probepuzzle" style="max-width: 600px; display: block; margin: 0 auto;">
   <p style="margin: 10px 0;"><em>17. A combined light probe "puzzle" with priorities mentioned</em></p>
 </div>
 
@@ -178,7 +178,7 @@ Irregularly shaped rooms often force ECLPVs to overlap awkwardly through walls i
 >- Do not rotate env_combined_light_probe_volumes (TEST!!!!!)
 
 <div style="text-align: center;">
-  <img src="/buglightprobe.png" alt="BuggedLightprobe" style="max-width: 400px; display: block; margin: 0 auto;">
+  <img src="/mapping/buglightprobe.png" alt="BuggedLightprobe" style="max-width: 400px; display: block; margin: 0 auto;">
   <p style="margin: 10px 0;"><em>18. Broken env_combined_light_probe_volume</em></p>
 </div>
 
@@ -189,19 +189,19 @@ Irregularly shaped rooms often force ECLPVs to overlap awkwardly through walls i
 *Open in a new window to enlarge:*
 <div style="display: flex; gap: 15px;">
   <div style="flex: 1;">
-    <img src="/lightprobesetup.png" alt="Edgefadesetup" style="width: 100%; display: block;">
+    <img src="/mapping/lightprobesetup.png" alt="Edgefadesetup" style="width: 100%; display: block;">
     <p style="text-align: center; margin: 10px 0;"><em>19. ECLPV edge fade setup</em></p>
   </div>
   <div style="flex: 1;">
-    <img src="/nofade.png" alt="No fade" style="width: 100%; display: block;">
+    <img src="/mapping/nofade.png" alt="No fade" style="width: 100%; display: block;">
     <p style="text-align: center; margin: 10px 0;"><em>20. ECLPV without fade or overlap</em></p>
   </div> 
     <div style="flex: 1;">
-    <img src="/8fade.png" alt="8 fade" style="width: 100%; display: block;">
+    <img src="/mapping/8fade.png" alt="8 fade" style="width: 100%; display: block;">
     <p style="text-align: center; margin: 10px 0;"><em>21. ECLPV with 8u edge fade and 16u overlap</em></p>
   </div> 
     <div style="flex: 1;">
-    <img src="/32fade.png" alt="32 fade" style="width: 100%; display: block;">
+    <img src="/mapping/32fade.png" alt="32 fade" style="width: 100%; display: block;">
     <p style="text-align: center; margin: 10px 0;"><em>22. ECLPV with 32u edge fade and 64u overlap</em></p>
   </div> 
 </div>
@@ -213,7 +213,7 @@ The primary function of VIS (visibility) is to determine what is visible to the 
 In Source 1, visibility was managed by converting geometry into [`func_detail`](https://developer.valvesoftware.com/wiki/Func_detail). Source 2 follows a similar logic, but the workflow depends on the asset type. While props are non-VIS contributors by default, mesh objects must be manually configured. To prevent a mesh from affecting VIS, you must enable the `Not a Vis Contributor` setting within the object properties.
 
 <div style="text-align: center;">
-  <img src="/nonvis.png" alt="nonvis" style="max-width: 400px; display: block; margin: 0 auto;">
+  <img src="/mapping/nonvis.png" alt="nonvis" style="max-width: 400px; display: block; margin: 0 auto;">
   <p style="margin: 10px 0;"><em>23. Object properties</em></p>
 </div> 
 
@@ -224,7 +224,7 @@ In technical terms, VIS operates using cubes called voxels. These voxels fill th
 If these voxels get to the [void](https://developer.valvesoftware.com/wiki/Void) (the empty space outside your map's sealed geometry), it will cause a VIS Leak. When a leak occurs it often results in objects rendering in and out of view. Ensure your outer "shell" is perfectly sealed and voxel sizes are kept to a minimum to keep the VIS contained. Any VIS contributor face that points outside of the map is a VIS leak. VIS can also affect shadows and lightning on your player model.
 
 <div style="text-align: center;">
-  <img src="/visleak.gif" alt="visleak" style="max-width: 400px; display: block; margin: 0 auto;">
+  <img src="/mapping/visleak.gif" alt="visleak" style="max-width: 400px; display: block; margin: 0 auto;">
   <p style="margin: 10px 0;"><em>24. VIS leak</em></p>
 </div>
 
@@ -238,17 +238,17 @@ To visualize how the engine is "thinking," you can view these voxels directly in
 To visualize which objects in your map are currently affecting visibility, click the ``Visibility contributors view`` button located in the toolbar (see image below).
 
 <div style="text-align: center;">
-  <img src="/viewviscontribs.png" alt="viscontribs" style="max-width: 60px; display: block; margin: 0 auto;">
+  <img src="/mapping/viewviscontribs.png" alt="viscontribs" style="max-width: 60px; display: block; margin: 0 auto;">
   <p style="margin: 10px 0;"><em>25. "Visibility contributors view" button</em></p>
 </div> 
 
 <div style="display: flex; gap: 15px;">
   <div style="flex: 1;">
-    <img src="/kuutiovis.jpg" alt="8x MSAA" style="width: 100%; display: block;">
+    <img src="/mapping/kuutiovis.jpg" alt="8x MSAA" style="width: 100%; display: block;">
     <p style="text-align: center; margin: 10px 0;"><em>26. kz_kuutio</em></p>
   </div>
   <div style="flex: 1;">
-    <img src="/kuutionovis.jpg" alt="CMAA2" style="width: 100%; display: block;">
+    <img src="/mapping/kuutionovis.jpg" alt="CMAA2" style="width: 100%; display: block;">
     <p style="text-align: center; margin: 10px 0;"><em>27. kz_kuutio with only VIS contributors</em></p>
   </div> 
 </div>
@@ -302,7 +302,7 @@ Missing materials now cause users to crash on secure servers. A recent 'safeguar
 This will not crash your client when running a listen server in insecure mode making it easy to miss until your map is tested on a dedicated server. 
 
 <div style="text-align: center;">
-  <img src="/materialerror.png" alt="Material error" style="max-width: 400px; display: block; margin: 0 auto;">
+  <img src="/mapping/materialerror.png" alt="Material error" style="max-width: 400px; display: block; margin: 0 auto;">
   <p style="margin: 10px 0;"><em>28. Crashed game caused by missing material</em></p>
 </div>
 
@@ -357,7 +357,7 @@ To make the glowing material appear as “glowing” (without as many problems) 
 >- Emissive materials can cause light artifacts. Using emissive materials as your primary light source often results in "noisy" or splotchy light artifacts, especially in dark environments. Disable ``Emissive lighting`` and instead use postprocessing bloom and light entities.
 
 <div style="text-align: center;">
-  <img src="/emissivefail.png" alt="Emissive fail" style="max-width: 400px; display: block; margin: 0 auto;">
+  <img src="/mapping/emissivefail.png" alt="Emissive fail" style="max-width: 400px; display: block; margin: 0 auto;">
   <p style="margin: 10px 0;"><em>29. Light artifacts caused by an emissive material being the main light source</em></p>
 </div>
 
@@ -370,7 +370,7 @@ Can be used to project materials onto faces. The best use case for this would be
 Why does this differ from just making a face with Csgo Complex? Well because faces tend to glitch out when viewed from further away, this doesn’t happen with overlays, as seen in the gif below.
 
 <div style="text-align: center;">
-  <img src="/overlayface.gif" alt="OverlayVsFace" style="max-width: 600px; display: block; margin: 0 auto;">
+  <img src="/mapping/overlayface.gif" alt="OverlayVsFace" style="max-width: 600px; display: block; margin: 0 auto;">
   <p style="margin: 10px 0;"><em>30. Overlay and face comparison</em></p>
 </div>
 
@@ -383,7 +383,7 @@ The Dxt1 (LDR) option can be used if the skybox image isn't HDR. This option use
 If your skybox has six faces (back, down, front, left, right, up), you need to convert it to a Cube Map format as seen in the image below. They can be puzzled together in image editors. 
 
 <div style="text-align: center;">
-  <img src="/skybox.png" alt="skycubemap" style="max-width: 400px; display: block; margin: 0 auto;">
+  <img src="/mapping/skybox.png" alt="skycubemap" style="max-width: 400px; display: block; margin: 0 auto;">
   <p style="margin: 10px 0;"><em>31. CS:GO skybox faces turned into a CS2 compatible skybox Cube Map texture</em></p>
 </div>
 
@@ -452,7 +452,7 @@ Good luck!
  > - Physics boundaries for triggers are not determined by the shape of their mesh by default. Instead physical boundaries for triggers are defined by their total width and length (object boundary). This makes any trigger with a complex shape redundant. To resolve, select the trigger in mesh mode, then within the mesh properties change physics type to ``mesh``.
 
 <div style="text-align: center;">
-  <img src="/triggermesh.png" alt="TriggerMesh" style="max-width: 400px; display: block; margin: 0 auto;">
+  <img src="/mapping/triggermesh.png" alt="TriggerMesh" style="max-width: 400px; display: block; margin: 0 auto;">
   <p style="margin: 10px 0;"><em>32. L shaped trigger with different physics types</em></p>
 </div>
 
@@ -462,7 +462,7 @@ Good luck!
 Adding a ``team_select`` entity to your map will add team selection scene to your map. This is an opportunity for you to display the most cinematic perspective of your map when players first load in. You can place the entity at any location and rotate the entity to get the best angle.
 
 <div style="text-align: center;">
-  <img src="/teamselectscreen.jpg" alt="Team Select Screen" style="max-width: 400px; display: block; margin: 0 auto;">
+  <img src="/mapping/teamselectscreen.jpg" alt="Team Select Screen" style="max-width: 400px; display: block; margin: 0 auto;">
   <p style="margin: 10px 0;"><em>33. kz_madhatter team select screen</em></p>
 </div>
 
@@ -474,7 +474,7 @@ Custom loading screens, map icons and description can be added to your maps as a
 >While you can have a maximum of 10 loading screen images, this will increase the size of your map file.
 
 <div style="text-align: center;">
-  <img src="/loadingscreen.png" alt="Loading screen" style="max-width: 400px; display: block; margin: 0 auto;">
+  <img src="/mapping/loadingscreen.png" alt="Loading screen" style="max-width: 400px; display: block; margin: 0 auto;">
   <p style="margin: 10px 0;"><em>34. Custom loading screen</em></p>
 </div>
 
@@ -489,7 +489,7 @@ Custom loading screens, map icons and description can be added to your maps as a
 Start and end zones should be clearly visible to the player. A self-illuminated gradient texture is an effective way to indicate these zones and other triggers the player may interact with. 
 
   <div style="flex: 1;">
-    <img src="/startandend.png" alt="backfacefixed.png" style="width: 100%; display: block;">
+    <img src="/mapping/startandend.png" alt="backfacefixed.png" style="width: 100%; display: block;">
     <p style="text-align: center; margin: 10px 0;"><em>35. Start and End zone</em></p>
   </div> 
 
@@ -499,7 +499,7 @@ Start and end zones should be clearly visible to the player. A self-illuminated 
  ``Counter-Strike Global Offensive\content\csgo_addons\YOUR_ADDON\materials``
 
 <div style="text-align: center;">
-  <img src="/gradient.png" alt="Gradient" style="max-width: 400px; display: block; margin: 0 auto;">
+  <img src="/mapping/gradient.png" alt="Gradient" style="max-width: 400px; display: block; margin: 0 auto;">
   <p style="margin: 10px 0;"><em>36. Gradient</em></p>
 </div>
 
@@ -540,14 +540,14 @@ To do this, open the `Postprocessing Editor` and create a new ``.vpost`` file. S
 Following the Animgraph 2 update, certain faces now draw false or incomplete shadows. This may occur when a surface is removed for optimization purposes or a shadow is casted from one face behind another. While the ``toolsblocklight`` material is intended to resolve this issue, it does not work in all cases since the sharpness and opacity of this material scales with lightmap resolution.
 
 <div style="text-align: center;">
-  <img src="/blocklight.png" alt="TriggerMesh" style="max-width: 550px; display: block; margin: 0 auto;">
+  <img src="/mapping/blocklight.png" alt="TriggerMesh" style="max-width: 550px; display: block; margin: 0 auto;">
   <p style="margin: 10px 0;"><em>37. Blocklight shadow fades as the lightmap gets more populated</em></p>
 </div>
 
 If you have removed a face from an object to save lightmap space, and that object is drawing incomplete shadows, replace the face. Then select the replaced face and reduce the `Lightmap Resolution Bias` to ``-4``.
 
 <div style="text-align: center;">
-  <img src="/bias.png" alt="lightmapbias" style="max-width: 550px; display: block; margin: 0 auto">
+  <img src="/mapping/bias.png" alt="lightmapbias" style="max-width: 550px; display: block; margin: 0 auto">
   <p style="margin: 10px 0;"><em>38. Lightmap Resolution Bias</em></p>
 </div>
 
@@ -555,22 +555,22 @@ In situations where a shadow shouldn't be visible. First attempt disabling shado
 
 <div style="display: flex; gap: 15px;">
   <div style="flex: 1;">
-    <img src="/badshadows.png" alt="badshadows" style="width: 100%; display: block;">
+    <img src="/mapping/badshadows.png" alt="badshadows" style="width: 100%; display: block;">
     <p style="text-align: center; margin: 10px 0;"><em>39. Broken backface shadows</em></p>
   </div>
   <div style="flex: 1;">
-    <img src="/badshadow2.png" alt="badshadows2" style="width: 100%; display: block;">
+    <img src="/mapping/badshadow2.png" alt="badshadows2" style="width: 100%; display: block;">
     <p style="text-align: center; margin: 10px 0;"><em>40. Broken backface shadows</em></p>
   </div> 
 </div>
 
 <div style="display: flex; gap: 15px;">
   <div style="flex: 1;">
-    <img src="/backfacenotfixed.png" alt="backfacenotfixed.png" style="width: 100%; display: block;">
+    <img src="/mapping/backfacenotfixed.png" alt="backfacenotfixed.png" style="width: 100%; display: block;">
     <p style="text-align: center; margin: 10px 0;"><em>41. Broken shadows</em></p>
   </div>
   <div style="flex: 1;">
-    <img src="/backfacefixed.jpg" alt="backfacefixed.png" style="width: 100%; display: block;">
+    <img src="/mapping/backfacefixed.jpg" alt="backfacefixed.png" style="width: 100%; display: block;">
     <p style="text-align: center; margin: 10px 0;"><em>42. Fixed shadows (added non-VIS faces with -4 lightmap bias)</em></p>
   </div> 
 </div>
@@ -598,11 +598,11 @@ Ways of finding or fixing missing assets:
 
 <div style="display: flex; gap: 15px;">
   <div style="flex: 1;">
-    <img src="/missingmaterial.png" alt="backfacenotfixed.png" style="width: 100%; display: block;">
+    <img src="/mapping/missingmaterial.png" alt="backfacenotfixed.png" style="width: 100%; display: block;">
     <p style="text-align: center; margin: 10px 0;"><em>43. Missing texture</em></p>
   </div>
   <div style="flex: 1;">
-    <img src="/postprocessingbug.gif" alt="Broken post_processing_volume" style="width: 100%; display: block;">
+    <img src="/mapping/postprocessingbug.gif" alt="Broken post_processing_volume" style="width: 100%; display: block;">
     <p style="text-align: center; margin: 10px 0;"><em>44. Broken post_processing_volume due to a missing .vpost file</em></p>
   </div> 
 </div>
@@ -626,7 +626,7 @@ For example, `volumetric_fog` is unavailable in CS2 but available in Half-Life: 
 ### 1. Enable ``Tabbed Mode`` in "Window" to easily swap between ``.vmap`` files.
 
 <div style="text-align: center;">
-  <img src="/tabbedmode.png" alt="Tabbed Mode" style="max-width: 400px; display: block; margin: 0 auto;">
+  <img src="/mapping/tabbedmode.png" alt="Tabbed Mode" style="max-width: 400px; display: block; margin: 0 auto;">
   <p style="margin: 10px 0;"><em>45. Tabbed mode</em></p>
 </div>
 
@@ -639,7 +639,7 @@ To create an instance, select your objects, right-click, and choose ``Selected O
 Instances have to be edited inside the instance editor by double clicking the instance object.
 
 <div style="text-align: center;">
-  <img src="/instaces.gif" alt="Instances" style="max-width: 400px; display: block; margin: 0 auto;">
+  <img src="/mapping/instaces.gif" alt="Instances" style="max-width: 400px; display: block; margin: 0 auto;">
   <p style="margin: 10px 0;"><em>46. Ladder instance</em></p>
 </div>
 
@@ -709,12 +709,12 @@ If this is done, remember to set this env_combined_light_probe_volume’s priori
     - These sliders configure the waters fade: 
 
 <div style="text-align: center;">
-  <img src="/waterfade.png" alt="WaterFade" style="max-width: 600px; display: block; margin: 0 auto;">
+  <img src="/mapping/waterfade.png" alt="WaterFade" style="max-width: 600px; display: block; margin: 0 auto;">
   <p style="margin: 10px 0;"><em>47. Water fade sliders</em></p>
 </div>
 
 <div style="text-align: center;">
-  <img src="/avalon.png" alt="Avalon" style="max-width: 600px; display: block; margin: 0 auto;">
+  <img src="/mapping/avalon.png" alt="Avalon" style="max-width: 600px; display: block; margin: 0 auto;">
   <p style="margin: 10px 0;"><em>48. kz_avalon setup (if toolsskybox worked as intended the skybox would probably have to cover whole main map's water)</em></p>
 </div>
 
@@ -724,11 +724,11 @@ If this is done, remember to set this env_combined_light_probe_volume’s priori
 
 <div style="display: flex; gap: 5px;">
   <div style="flex: 1;">
-  <img src="/wordwater.png" alt="wordwater" style="max-width: 350px; display: block; margin: 0 auto;">
+  <img src="/mapping/wordwater.png" alt="wordwater" style="max-width: 350px; display: block; margin: 0 auto;">
   <p style="margin: 10px 0;"><em>49. word's infinite water tutorial, <a href="https://discord.com/channels/452163833973440522/1171813934832046173/1409374472594526319">discord link</a></em></p>
   </div>
   <div style="flex: 1;">
-  <img src="/jakkewater.png" alt="jakkewater" style="max-width: 350px; display: block; margin: 0 auto;">
+  <img src="/mapping/jakkewater.png" alt="jakkewater" style="max-width: 350px; display: block; margin: 0 auto;">
   <p style="margin: 10px 0;"><em>50. jakke's infinite water template, <a href="https://discord.com/channels/452163833973440522/1171813934832046173/1470094992453402726">discord link</a></em></p>
   </div>
 </div>
@@ -738,11 +738,11 @@ If this is done, remember to set this env_combined_light_probe_volume’s priori
 
 <div style="display: flex; gap: 15px;">
   <div style="flex: 1;">
-    <img src="/8xmsaa.png" alt="8x MSAA" style="width: 100%; display: block;">
+    <img src="/mapping/8xmsaa.png" alt="8x MSAA" style="width: 100%; display: block;">
     <p style="text-align: center; margin: 10px 0;"><em>51. Infinite water with 8x MSAA setting</em></p>
   </div>
   <div style="flex: 1;">
-    <img src="/cmaa2.png" alt="CMAA2" style="width: 100%; display: block;">
+    <img src="/mapping/cmaa2.png" alt="CMAA2" style="width: 100%; display: block;">
     <p style="text-align: center; margin: 10px 0;"><em>52. Infinite water with CMAA2 setting</em></p>
   </div> 
 </div>
@@ -769,13 +769,14 @@ _Thank you for visiting_,
 
 <div style="display: flex; gap: 5px;">
   <div style="flex: 1; text-align: center;">
-    <img src="/jimi.png" alt="jimi" style="max-width: 350px; display: block; margin: 0 auto;">
+    <img src="/mapping/jimi.png" alt="jimi" style="max-width: 350px; display: block; margin: 0 auto;">
     <p style="margin: 10px 0;"><em><a href="https://steamcommunity.com/id/Pierre_Bourne/">jakke</a></em></p>
   </div>
   <div style="flex: 1; text-align: center;">
-    <img src="/grom.png" alt="grom" style="max-width: 350px; display: block; margin: 0 auto;">
+    <img src="/mapping/grom.png" alt="grom" style="max-width: 350px; display: block; margin: 0 auto;">
     <p style="margin: 10px 0;"><em><a href="https://steamcommunity.com/id/leetly">leetly</a></em></p>
   </div>
 </div>
 
   With support from the [CS2KZ mapping commmunity](https://discord.gg/R593VhE).
+
