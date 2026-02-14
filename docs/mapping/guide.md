@@ -1,3 +1,7 @@
+---
+outline: [2, 3]
+---
+
 <div style="text-align: center;">
   <img src="/mapping/kzmapping.png" alt="Mapping" style="max-width: 700px; display: block; margin: 0 auto 20px;">
 </div>
