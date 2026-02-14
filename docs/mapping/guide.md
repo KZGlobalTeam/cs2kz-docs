@@ -43,7 +43,7 @@ Maintaining a clean workflow saves you from a lot of troubleshooting later.
 </div>
 
 
-### Learn more:
+#### Learn more:
 
 [Source 2 101 - Hammer Crash Course #1 : Good workflow habits](https://www.youtube.com/watch?v=pdSDojRatHw), by Eagle One Development Team
 
@@ -98,7 +98,6 @@ The lightmap resolution of your map can have a significant impact on the outcome
 With this in mind you also want to avoid calculating lighting for areas of the map never visible to the player. The first step in achieving this is to cull lightmap space from your map by deleting unnecessary faces. Any face that will never be visible to the player should be deleted (assuming it is not contributing to vis). The second step is to incorporate a mesh with the ``toolslightmapres`` material. This is a [tool material](https://developer.valvesoftware.com/wiki/Tool_textures_(Source_2)) which tells the engine where to calculate high resolution lightmap space and will tell the engine where lightmap space should be prioritised.
 
 > [!WARNING]
->
 > - Unexpected edges or lines on a surface, discolored textures and shadows without visible sources may indicate that a higher lightmap resolution is required.
 
 <div style="text-align: center;">
@@ -173,9 +172,8 @@ Irregularly shaped rooms often force ECLPVs to overlap awkwardly through walls i
 > - If a certain object is causing problematic reflections, the option "Render to Cubemaps" can be disabled in the objects properties.
 
 > [!WARNING]
->- env_combined_light_probe_volume can sometimes break. Try recompiling the map or replacing combined light probes until it works again.
->
->- Do not rotate env_combined_light_probe_volumes (TEST!!!!!)
+> - env_combined_light_probe_volume can sometimes break. Try recompiling the map or replacing combined light probes until it works again.
+> - Do not rotate env_combined_light_probe_volumes (TEST!!!!!)
 
 <div style="text-align: center;">
   <img src="/mapping/buglightprobe.png" alt="BuggedLightprobe" style="max-width: 400px; display: block; margin: 0 auto;">
@@ -254,14 +252,13 @@ To visualize which objects in your map are currently affecting visibility, click
 </div>
 
 > [!NOTE]
->- Given you have the core geometry of your map finished, you only need to calculate VIS once to compile your map. This allows you to reduce compile times substantially when testing non-VIS related elements. However, making any change to the core geometry of your map will cause your map to leak. To resolve these leaks you should recompile VIS. 
+> - Given you have the core geometry of your map finished, you only need to calculate VIS once to compile your map. This allows you to reduce compile times substantially when testing non-VIS related elements. However, making any change to the core geometry of your map will cause your map to leak. To resolve these leaks you should recompile VIS. 
 
-> 
 > [!WARNING]
 > - The ``toolsnodraw`` material should not be used to 'seal' your map like you would in Source 1. This will cause a VIS leak.
 > - Whilst the ``toolsskybox`` can still be used to seal the sky of your map, this material no longer occludes objects outside the world mesh. If required you will need to use create and employ a new material with the ``Csgo Moondome`` shader using the same skybox texture as your ``env_sky`` entity.
 
-### Learn more:
+#### Learn more:
 
 [Counter-Strike 2 Hammer - Basic Map Optimisations (compile time)](https://www.youtube.com/watch?v=VGxPXnGJ0wM), by ReDMooNTV
 
@@ -276,7 +273,7 @@ Textures can turn raw geometry into a living breathing world. Fortunately making
 While there are no standards for the aesthetic of your map, there is an expectation that your textures should not impact visibility and maintain a degree of cohesion. Try to keep a consistent resolution for each texture where possible, align patterned materials with adjacent patterned materials, and ensure surfaces adopt their expected properties (walking on grass should sound like grass).  
 
 >[!NOTE]
-> - Valve assets can't be edited without decompiling them first.
+>- Valve assets can't be edited without decompiling them first.
 
 ### Custom Texturing and Materials
 Custom textures and materials can be added to your addon using the material editor. To add a new texture/material you will need to create a new ``.vmat`` file. To create a ``.vmat`` file simply open the material editor, press new and save the file within the ``CONTENT`` path like:
@@ -292,9 +289,8 @@ Opening the variables tab allows you to change the interactive properties of the
 > - Most material properties update in real-time. This means you can adjust your material in one window while viewing the result in game from another window.
 
 > [!WARNING]
->* Texture resolutions must be a power of two (e.g., ``1024x2048``, ``1024x128`` or ``2048x2048``). Supported file formats include ``JPG``, ``PNG``, ``TGA``, and ``PSD``.
->
->* Texture resolutions should be capped at ``2048x2048`` to optimize file size.
+> - Texture resolutions must be a power of two (e.g., ``1024x2048``, ``1024x128`` or ``2048x2048``). Supported file formats include ``JPG``, ``PNG``, ``TGA``, and ``PSD``.
+> - Texture resolutions should be capped at ``2048x2048`` to optimize file size.
 
 Missing materials now cause users to crash on secure servers. A recent 'safeguard' change from Valve. This usually occurs when you assign a material to a face, then delete that material from your addon folder or don't place it inside  
 ``Counter-Strike Global Offensive\content\csgo_addons\YOUR_ADDON\materials``. 
@@ -354,7 +350,7 @@ With glowing materials it's important to remember that it will cause light artif
 To make the glowing material appear as “glowing” (without as many problems) a combination of postprocessing (with bloom) and the use of light entities is recommended. Good light entities for this case could be “light_rect” and “light_omni2” with either a sphere or one of the tubes as a light shape. Remember that less light entities are better than many.
 
 > [!WARNING]
->- Emissive materials can cause light artifacts. Using emissive materials as your primary light source often results in "noisy" or splotchy light artifacts, especially in dark environments. Disable ``Emissive lighting`` and instead use postprocessing bloom and light entities.
+> - Emissive materials can cause light artifacts. Using emissive materials as your primary light source often results in "noisy" or splotchy light artifacts, especially in dark environments. Disable ``Emissive lighting`` and instead use postprocessing bloom and light entities.
 
 <div style="text-align: center;">
   <img src="/mapping/emissivefail.png" alt="Emissive fail" style="max-width: 400px; display: block; margin: 0 auto;">
@@ -393,7 +389,7 @@ Moondome is used because ``toolsskybox`` doesn’t work properly and renders thi
 "Cube Map texture" is the same texture as used for ``Sky``.
 
 > [!WARNING]
-> * When making moondomes it’s important to keep in mind that the Color setting is set to gray by default and should be changed to white to not have the moondome darker than the skybox.
+> - When making moondomes it’s important to keep in mind that the Color setting is set to gray by default and should be changed to white to not have the moondome darker than the skybox.
 
 #### `Refract` 
 
@@ -426,10 +422,9 @@ By default the particle editor is soft locked for fresh installations of Hammer.
 If you're interested in learning more about particle systems, we recommend decompiling a Valve particle system or custom asset and exploring its properties within the particle editor.
 
 
->[!Warning]
->- Adding an excessive number of particle systems or systems with high emission rates can significantly impact performance.
->
->- Use ``Render omni2 lights`` sparingly.
+> [!WARNING]
+> - Adding an excessive number of particle systems or systems with high emission rates can significantly impact performance.
+> - Use ``Render omni2 lights`` sparingly.
 
 ## Sounds
 
@@ -470,8 +465,8 @@ Adding a ``team_select`` entity to your map will add team selection scene to you
 
 Custom loading screens, map icons and description can be added to your maps as a final touch with a hint of professionalism. You might like to add some nice screenshots of your map, credits for contributors and an icon representing yourself as the author.
 
->[!WARNING]
->While you can have a maximum of 10 loading screen images, this will increase the size of your map file.
+> [!WARNING]
+> While you can have a maximum of 10 loading screen images, this will increase the size of your map file.
 
 <div style="text-align: center;">
   <img src="/mapping/loadingscreen.png" alt="Loading screen" style="max-width: 400px; display: block; margin: 0 auto;">
@@ -515,7 +510,7 @@ Start and end zones should be clearly visible to the player. A self-illuminated 
 
 7. Disable collision and VIS contribution in the object properties.
 
-> [!note]
+> [!NOTE]
 > - Rather than tinting/coloring the material in the material editor, you can adjust the color of the object in the object properties.
 
 ### 4. Custom postprocessing
@@ -525,7 +520,7 @@ You can adjust you visual athmosphere further on your map, with postprocessing.
 To do this, open the `Postprocessing Editor` and create a new ``.vpost`` file. Save it to ``CONTENT\csgo_addons\YOUR_ADDON\postprocess``. Once saved you can add different postprocessing layers to the file. Create a new mesh in your map and tie it to a ``post_processing_volume`` entity. Then in the object properties set `Postprocessing file (.vpost)` to the .vpost file just added.
  Once compiled your map will inherit the postprocessing layers from the .vpost file.
 
->[!NOTE]
+> [!NOTE]
 > You can have postprocessing limited to the volume of the mesh or encompassing the entire map by enabling `Master Volume`.
 >
 > By adjusting the postprocessing layers in the Postprocessing Editor, you can view the changes in real-time.
@@ -607,8 +602,8 @@ Ways of finding or fixing missing assets:
   </div> 
 </div>
 
->[!note]
->- Missing materials can be difficult to find when used in models.
+> [!NOTE]
+> - Missing materials can be difficult to find when used in models.
 
 
 ### 6. Custom fonts won't be packed into the workshop map.
@@ -655,15 +650,15 @@ Then re-open Hammer and reload the map.
 
 This causes Hammer to only compile used assets, otherwise it would pack everything ever compiled to the workshop version (even assets not used anymore).
 
->[!NOTE]
->- Assets are compiled when viewed in Hammer.
+> [!NOTE]
+> - Assets are compiled when viewed in Hammer.
 
->[!DANGER]
->* COMPILED FILES ARE FOUND IN THE ``/GAME`` PATH AND **NOT** THE ``/CONTENT`` PATH.
+> [!DANGER]
+> - COMPILED FILES ARE FOUND IN THE ``/GAME`` PATH AND **NOT** THE ``/CONTENT`` PATH.
 >
 >   FOR EXAMPLE: ``Counter-Strike Global Offensive\GAME\csgo_addons\YOUR_ADDON``
 >
->* **IT IS RECOMMENDED BACKING UP YOUR ADDONS ``/CONTENT`` FOLDER BEFORE TRYING THIS.**
+> - **IT IS RECOMMENDED BACKING UP YOUR ADDONS ``/CONTENT`` FOLDER BEFORE TRYING THIS.**
 
 ### 5. Decompiling maps
 
@@ -734,7 +729,7 @@ If this is done, remember to set this env_combined_light_probe_volume’s priori
 </div>
 
 > [!WARNING]
->* ``MSAA multisampling`` options render a line at the horizon. ``CMAA2`` and ``None`` work fine.
+> - ``MSAA multisampling`` options render a line at the horizon. ``CMAA2`` and ``None`` work fine.
 
 <div style="display: flex; gap: 15px;">
   <div style="flex: 1;">
