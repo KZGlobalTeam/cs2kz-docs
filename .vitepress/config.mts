@@ -15,6 +15,10 @@ export default defineConfig({
   metaChunk: true,
 
   themeConfig: {
+    search: {
+      provider: "local",
+    },
+
     nav: nav(),
     sidebar: {
       "/": sidebar(),
