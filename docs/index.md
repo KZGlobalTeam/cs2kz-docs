@@ -20,3 +20,4 @@ CS2KZ is a skill-based mod for Counter-Strike 2 where players complete challengi
 ## Creator resources
 
 - [Map Approval Process](/mapping/approval)
+- [Mapping for CS2KZ](/mapping/guide)
