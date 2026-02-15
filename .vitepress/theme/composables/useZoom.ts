@@ -9,10 +9,12 @@ export const useZoom = (router: Router, enableCb: EnableCallback) => {
     return;
   }
 
-  let zoom: ReturnType<typeof mediumZoom>;
+  let zoom: ReturnType<Awaited<typeof import("medium-zoom")["default"]>>;
 
   const enable = async () => {
-    zoom ??= (await import("medium-zoom")).default();
+    zoom ??= (await import("medium-zoom")).default({
+      background: "transparent",
+    });
 
     zoom.detach();
 
