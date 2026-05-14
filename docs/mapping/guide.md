@@ -31,25 +31,25 @@ Avoid employing a "jumps along a wall" design where the player simply follows a 
 
 ## Tiering (CKZ)
 
-In CS2KZ tiers are used to indicate the difficulty of a map. Once you've submitted a map for global approval the tier for CKZ and VNL will be determined by the map approval team. If your intention is to map for a particular difficulty it is important to know how these tiers are differentiated. While this guide provides a rough description of each tier for CKZ, appreciate that there are many nuances to tiering which can be difficult to quantitatively define. For example, the expected maximum longjump distance at each tier is very subjective. In addition, above tier 2 the difficulty of a longjump will often depend on more than just the block distance
+In CS2KZ tiers are used to indicate the difficulty of a map. Once you've submitted a map for global approval the tier for CKZ and VNL will be determined by the map approval team. If your intention is to map for a particular difficulty it is important to know how these tiers are differentiated. While this guide provides a rough description of each tier for CKZ, appreciate that there are many nuances to tiering which can be difficult to quantitatively define. For example, the distance of a longjump is only one of many factors with contribute to difficulty of a jump. 
 
 Tier 1: No multi-strafing required (max 235 block). Players who are new to KZ should be able to complete these maps but may need to line up for jumps.
 
 Tier 2: Some multi-strafing required. May include rudimentary box-tech jumps, short multi bunny-hop sequences. Expect longjumps up to ~240 units. May include very easy slide ramps and ladder jumps which require little to no precision/strafing.
 
-Tier 3: Entry level timing and precision. Expect longjumps up to ~256 units. Box-tech is slightly more difficult, bunny-hop sequences are both longer and harder with single hops being rare or relatively easy when incorporated. Introduction to more challenging slide ramps and ladder jumps.
+Tier 3: Entry level timing and precision. Expect longjumps up to ~250 units. Box-tech is slightly more difficult, bunny-hop sequences are both longer and harder with single hops being rare or relatively easy when incorporated. Introduction to more challenging slide ramps and ladder jumps.
 
-Tier 4: Good timing and precision is required for most jumps. Expect long jumps up to ~265 units. Bunny-hop sequences may be single-hop only but routing will still be relatively simple. Some blocks may be timed but are not too challenging. Slides require more precise entry/exits and may involve basic resurfs. Ladder jumps are expected. Some more niche techniques such as danvari, vesq tech and wallstrafing can be expected. Intermixed elements of gameplay sequences are introduced but are relatively simple.
+Tier 4: Good timing and precision is required for most jumps. Expect long jumps up to ~260 units. Bunny-hop sequences may be single-hop only but routing will still be relatively simple. Some blocks may be timed, or anti-bhop but are not too challenging. Slides require more precise entry/exits and may involve basic resurfs. Ladder jumps are expected. Some more niche techniques such as danvari, vesq tech and wallstrafing can be expected. Intermixed elements of gameplay sequences are introduced but are relatively simple.
 
-Tier 5: Proficiency in longjumping, bunny-hopping, sliding and ladders is required. Expect longjumps up to ~270 units. Various elements of gameplay are often intermixed. Bunny-hop sequences may be longer or more technical, with a majority of the blocks being single-hop only. Anti-bhop is frequently implemented to force players from progessing without a longjump or basic pre-keep. More technical slide and ladder gameplay is common and typically requires precision or strafing. Niche tech is more frequent and challenging. 
+Tier 5: Proficiency in longjumping, bunny-hopping, sliding and ladders is required. Expect longjumps up to ~270 units. Various elements of gameplay are often intermixed. Bunny-hop sequences may be longer or more technical, with a majority of the blocks being single-hop only. Timed and anti-bhop blocks are frequently implemented to force a longjump or pre-keep. More technical slide and ladder gameplay is common and typically requires precision or strafing. Niche tech is more frequent and challenging. 
 
 Tier 6: Sequential intermixed gameplay elements are prevalent and require a solid understanding of various techniques. Expect longjumps up to ~275 units and a stronger emphasis on multi-strafing for all gameplay elements. Bunny-hop sequences are far more technical with routing being equally complex.
 
 Tier 7: Almost entirely consisting of sequential intermixed gameplay elements, extreme longjumps, bunny-hop sequences, slides and ladder jumps that require precision and multi-strafing. Expect longjumps above ~275 units.
 
-Tier 8: Mastery of all aspects of KZ are required pushing the best players to their limits. 
+Tier 8: Mastery of all aspects of KZ are required pushing the best players to their limits. The highest tier possible for TP runs on CKZ courses.  
 
-Tier 9: Technically possible but only feasible for the top 1% of players.
+Tier 9: Technically possible with TAS but not for humans. If somebody beats a Tier 9 it should really be a Tier 8..
 
 Tier 10: Impossible, even with absolutely perfect input and technique (effectively reserved for maps which are impossible in VNL but feasible in CKZ).
 
