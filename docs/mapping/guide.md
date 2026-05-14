@@ -10,9 +10,23 @@ outline: [2, 3]
 
 The aim of this document is to help guide new and experienced mappers towards improving the quality of their CS2KZ maps in preparation for global map approval. Following this guide will provide insight and resolutions to issues that may prevent your map from being approved. This document is written under the assumption that you have previous experience using the Hammer map editor.
 
+## Getting started (install the plugin)
+ Core KZ gameplay elements such as bunnyhop and teleport triggers are easily implemented using the [CS2KZ Mapping API](https://github.com/KZGlobalTeam/cs2kz-metamod/wiki/Mapping-API). To get setup and run your map with the CS2KZ plugin and Mapping API features, vist zer0.k's [cs2kz mapping](https://github.com/zer0k-z/cs2kz-mapping). Note that these setup scripts may need to be run in administrator mode to function properly.
+
+ Once installed, you will have a new set of CS2KZ features available for trigger_multiple entities.  
+
+ > [!WARNING]
+ > - Physics boundaries for triggers are not determined by the shape of their mesh by default. Instead physical boundaries for triggers are defined by their total width and length (object boundary). This makes any trigger with a complex shape redundant. To resolve, select the trigger in mesh mode, then within the mesh properties change physics type to ``mesh``.
+
+<div style="text-align: center;">
+  <img src="/mapping/triggermesh.png" alt="TriggerMesh" style="max-width: 400px; display: block; margin: 0 auto;">
+  <p style="margin: 10px 0;"><em>32. L shaped trigger with different physics types</em></p>
+</div>
+
+
 ## Design
 
-To secure a spot in the *Global Map pool*, your map requires functional gameplay and a level of visual polish that goes beyond the basics. Maps that consist of "box rooms" with flat textures tiled across large surfaces are typically rejected, as they lack the environmental depth expected for global standards.
+To secure a spot in the *Global Map pool*, your map requires functional gameplay and a level of visual polish that goes beyond the basics. Maps that consist of "box rooms" with flat textures tiled across large surfaces are typically rejected as they lack the environmental depth expected for global standards.
 
 Break up large empty spaces by introducing geometry which disrupts the room's silhouette. Adding structural elements such as pillars, recessed wall panels, or trim where surfaces meet can create natural highlights and shadows, transforming a hollow shell into a lively space.
 
@@ -29,9 +43,11 @@ Avoid employing a "jumps along a wall" design where the player simply follows a 
   </div>
 </div>
 
-## Tiering (CKZ)
+## Tiering 
 
-In CS2KZ tiers are used to indicate the difficulty of a map. Once you've submitted a map for global approval the tier for CKZ and VNL will be determined by the map approval team. If your intention is to map for a particular difficulty it is important to know how these tiers are differentiated. While this guide provides a rough description of each tier for CKZ, appreciate that there are many nuances to tiering which can be difficult to quantitatively define. For example, the distance of a longjump is only one of many factors with contribute to difficulty of a jump. 
+In CS2KZ tiers are used to indicate the difficulty of a map. Once you've submitted a map for global approval the tier for CKZ and VNL will be determined by the map approval team. If your intention is to map for a particular difficulty it is important to know how these tiers are differentiated. While this guide provides a rough description for each tier, appreciate that there are many nuances to tiering which can be difficult to quantitatively define. For example, distance is just one of many factors which contribute to the difficulty of a jump. 
+
+### CKZ
 
 Tier 1: No multi-strafing required (max 235 block). Players who are new to KZ should be able to complete these maps but may need to line up for jumps.
 
@@ -52,6 +68,31 @@ Tier 8: Mastery of all aspects of KZ are required pushing the best players to th
 Tier 9: Technically possible with TAS but not for humans. If somebody beats a Tier 9 it should really be a Tier 8..
 
 Tier 10: Impossible, even with absolutely perfect input and technique (effectively reserved for maps which are impossible in VNL but feasible in CKZ).
+
+### VNL
+
+Tier 1: Should be doable by a player who was just taught how to move in game. Minimal turning and no crouch jumps (i.e knows how to go from the base of xbox to short on de_dust2 and knows how to climb a ladder).
+
+Tier 2: Most basic air strafing, bhopping, surfing, ladders, and corners. Knowledge of CJ (i.e has knowledge of air strafing).
+
+Tier 3: Starts to require more advanced understanding of T2 techs. LJs up to 235 block (i.e difficulty of window to cat on mirage). Techs such as pre keeping, HSW, and VESQ are required. No more than 235 LJ block.
+
+Tier 4: Starts requiring harder techs such as basic JBs (90* & 180*), walking bhop blocks, ladder glide, danvari, and more proficient in all previous techs. No more than 241 block LJ.
+
+Tier 5: Requires players to start spending a bit more time trying. Better execution of previous techs, 241 LJ block max, advanced turning knowledge, harder bhops.
+
+Tier 6: Binds starting to be considered, player needs very good knowledge and execution of all techs
+
+Tier 7: The hardest VNL techs combined with strafey jumps or very weird pre-keep.
+
+Tier 8: Reaching close to the limits of what is doable by humans. Player requires world record level skill and flawless execution of ALL VNL techs.
+
+Tier 9: Unfeasible. Technically possible but a human will likely not be able to do it (e.g kz_saishuu PRO)
+
+Tier 10: Impossible. Beyond what is possible with the current game mechanics (e.g surfing to gain height or LJ'ing 260 block)
+
+#### Learn more:
+[VNL Map Running Spreadsheet](https://bit.ly/vnltiers), by Global Map Coverage
 
 
 ## Meshes
@@ -465,19 +506,6 @@ Good luck!
 [Custom Sounds on Hammer, Counter Strike 2, Source 2 full guide, looping sounds tutorial, area based.](https://youtu.be/xcILOV_eFCE?si=Rd26D8O4Gb3CaEyP), by Brian Vuksanovich
 
 [Encoding.txt](https://www.source2.wiki/CommunityGuides/encodingtxt?game=any)
-
-## Gameplay
- Core KZ gameplay elements such as bunnyhop and teleport triggers are now easily implemented using [CS2KZ Mapping API](https://github.com/KZGlobalTeam/cs2kz-metamod/wiki/Mapping-API). To test your map with the CS2KZ plugin and Mapping API features, vist zer0.k's [cs2kz mapping](https://github.com/zer0k-z/cs2kz-mapping).
-
- Ensure that your map follows the global map standards if you wish to have your map approved for the global leaderboards.
-
- > [!WARNING]
- > - Physics boundaries for triggers are not determined by the shape of their mesh by default. Instead physical boundaries for triggers are defined by their total width and length (object boundary). This makes any trigger with a complex shape redundant. To resolve, select the trigger in mesh mode, then within the mesh properties change physics type to ``mesh``.
-
-<div style="text-align: center;">
-  <img src="/mapping/triggermesh.png" alt="TriggerMesh" style="max-width: 400px; display: block; margin: 0 auto;">
-  <p style="margin: 10px 0;"><em>32. L shaped trigger with different physics types</em></p>
-</div>
 
 ## Nice to haves
 
