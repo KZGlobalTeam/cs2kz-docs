@@ -486,7 +486,7 @@ Coming from Source 1 you may have used the ``LightmappedGeneric`` shader for you
 
 Particle effects such as fire, water ripples and dust motes can be added to your map with an ``info_particle_system`` entity. While some stock particle systems are available, many will require tweaking within the particle editor to function. 
 
-By default the particle editor is soft locked for fresh installations of Hammer. To enable the particle editor follow [this](https://developer.valvesoftware.com/wiki/Counter-Strike_2_Workshop_Tools/Particles) tutorial. 
+By default the particle editor is soft locked for fresh installations of Hammer. The CS2KZ mapping api enables the particle editor. If you are not using the mapping API follow [this](https://developer.valvesoftware.com/wiki/Counter-Strike_2_Workshop_Tools/Particles) tutorial to enable the particle editor. 
 
 If you're interested in learning more about particle systems, we recommend decompiling a Valve particle system or custom asset and exploring its properties within the particle editor.
 
@@ -497,7 +497,14 @@ If you're interested in learning more about particle systems, we recommend decom
 
 ## Sounds
 
-Good luck!
+Good luck! Sounds are notoriously difficult to implement at the moment. 
+
+>[!WARNING]
+>- Despite what some tutorials have suggested, the ambient_generic entity still functions.
+>- Spawning inside of an env_soundscape will not activate the soundscape. You can resolve this issue by moving the env_soundscape radius slightly ahead of the player spawn point. 
+>- Looped soundevents will deactivate if the player leaves the audible radius. To resolve, either increase the radius or have a trigger restart the sound within the audible range
+>- Sounds which are triggered outside of the audible radius will immediately stop playing on dedicated servers.
+>- On dedicated servers when a trigger is employed to play a sound from an ambient_generic entity, if the trigger object is triggered more than once, the sound will stop and become unplayable for the rest of the game session.       
 
 #### Learn more:
 
