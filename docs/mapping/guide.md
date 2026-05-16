@@ -63,9 +63,9 @@ Tier 6: Sequential intermixed gameplay elements are prevalent and require a soli
 
 Tier 7: Almost entirely consisting of sequential intermixed gameplay elements, extreme longjumps, bunny-hop sequences, slides and ladder jumps that require precision and multi-strafing. Expect longjumps above ~275 units.
 
-Tier 8: Mastery of all aspects of KZ are required pushing the best players to their limits. The highest tier possible for TP runs on CKZ courses.  
+Tier 8: Mastery of all aspects of KZ are required pushing the best players to their limits. The highest tier humanly possible for runs on CKZ courses.  
 
-Tier 9: Technically possible with TAS but not for humans. If somebody beats a Tier 9 it should really be a Tier 8..
+Tier 9: Technically possible with TAS but not for humans. If somebody beats a Tier 9 it should really be a Tier 8.
 
 Tier 10: Impossible, even with absolutely perfect input and technique (effectively reserved for maps which are impossible in VNL but feasible in CKZ).
 
