@@ -16,14 +16,14 @@ The map approval process structure will closely resemble GOKZ with a few key det
 
 - **The global map approval team**, a group of experienced KZ community members will review the map. They are responsible for evaluating the
 difficulty, ranking potential, and adherence to community standards for each course.
-- Maps will be assessed on objective metrics such as design, gameplay, lighting and difficulty.
+- Maps will be assessed on objective metrics such as design, lighting, gameplay and difficulty.
 - The team will also consider whether the course is "reasonable to compete on," allowing for some flexibility and creative expression in map design.
 
 > [!NOTE]
-> - Each map approval member team will provide their own review for submitted maps. Sometimes one member may deny a map despite a majority voting for approval. In such circumstances the reasoning for denial is thoroughly reviewed and approval is determined by the map approval team leader.
+> - Each map approval team member will provide their own review for submitted maps. Sometimes one member may deny a map despite a majority voting for approval. In such circumstances the reasoning for denial is thoroughly reviewed and approval is determined by the map approval team leader.
 
 ## 3. Denied maps
-- During a **map release**, maps submitted which have no met the standard expected for the global map pool will be denied.
+- During a **map release**, maps submitted which have not met the standard expected for the global map pool will be denied.
 - If your map is denied, you are encouraged to resolve any issues determined by the map approval team, post your updates to **new-maps** for testing, and resubmit for the next map release.
 
 > [!WARNING]
