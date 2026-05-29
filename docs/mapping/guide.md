@@ -479,8 +479,6 @@ Custom loading screens, map icons and description can be added to your maps as a
 
 #### Learn more:
 
-[CS2 Loading Screen Creator](https://github.com/jakkekz/cs2-loading-screen-stuff), by jakke
-
 [Change Loading Map Screens in Counter Strike 2, Hammer Mapping tutorial, Source 2 guide.](https://www.youtube.com/watch?v=P9oxDXHoV9o), by Brian Vuksanovich
 
 ### 3. Gradient Start & End zones
@@ -550,7 +548,7 @@ If you have removed a face from an object to save lightmap space, and that objec
   <p style="margin: 10px 0;"><em>38. Lightmap Resolution Bias</em></p>
 </div>
 
-In situations where a shadow shouldn't be visible. First attempt disabling shadow casting for the problematic object. If the face casting incorrect shadows is a VIS-contributor you will need to make a "dummy face". First retexture the surface of the problematic face with the toolsnodrawmaterial. Then create the new dummy face by copying the original face and using paste special (Ctrl+Shift+V). For the new dummy face, within object properties enable "Not a vis contributor", disable shadow casting, and retexture the material to match the original surface. Be careful to ensure you do not disable VIS contribution for the world mesh. 
+In situations where a shadow shouldn't be visible. First attempt disabling shadow casting for the problematic object. If the face casting incorrect shadows is a VIS-contributor you will need to make a "dummy face". First retexture the surface of the problematic face with the toolsnodraw material. Then create the new dummy face by copying the original face and using paste special (Ctrl+Shift+V). For the new dummy face, within object properties enable "Not a vis contributor", disable shadow casting, and retexture the material to match the original surface. Be careful to ensure you do not disable VIS contribution for the world mesh. 
 
 <div style="display: flex; gap: 15px;">
   <div style="flex: 1;">
@@ -754,8 +752,6 @@ If this is done, remember to set this env_combined_light_probe_volume’s priori
 - [Source2Viewer](https://source2viewer.com/): Tool for decompiling CSGO and CS2 assets from vpk packages.
 - [Valve Developer Community](https://developer.valvesoftware.com/wiki/Source_2/Docs): Official Source Engine wiki.
 - [Source2 Wiki](https://www.source2.wiki/CommunityGuides/installS2Sdk?game=cs2): Community wiki for S2 made by Angel, DoctorGurke and others.
-- [Text .vmat generator](https://jakkekz.github.io/fuk-point_worldtext/): Tool for generating custom text textures and overlays, made by jakke
-- [CS2 Loading Screen Creator](https://github.com/jakkekz/cs2-loading-screen-stuff): Tool for creating custom map loading sreens, made by jakke
 - [Eagle One Development Team Youtube Channel](https://www.youtube.com/@eagleonedevelopmentteam849/videos), Various tutorials covering the fundamentals of the Source 2 Hammer editor.
 - [Brian Vuksanovich's Youtube Channel](https://www.youtube.com/@brian-vuksanovich/videos): Various tutorials covering more niche features of Source 2.
 - [ReDMooNTV's CS2 Hammer series](https://www.youtube.com/watch?v=UJgoj2-8xkk&list=PLwcbHxIkIB3eRNVnDiwUDkKeECB_tbyKA), Various tutorials for Source 2 hammer by ReDMooNTV
@@ -769,11 +765,11 @@ _Thank you for visiting_,
 <div style="display: flex; gap: 5px;">
   <div style="flex: 1; text-align: center;">
     <img src="/mapping/jimi.png" alt="jimi" style="max-width: 350px; display: block; margin: 0 auto;">
-    <p style="margin: 10px 0;"><em><a href="https://steamcommunity.com/id/Pierre_Bourne/">jakke</a></em></p>
+    <p style="margin: 10px 0;"><em><a href="http://steamcommunity.com/profiles/76561197981712950">jakke</a></em></p>
   </div>
   <div style="flex: 1; text-align: center;">
     <img src="/mapping/grom.png" alt="grom" style="max-width: 350px; display: block; margin: 0 auto;">
-    <p style="margin: 10px 0;"><em><a href="https://steamcommunity.com/id/leetly">leetly</a></em></p>
+    <p style="margin: 10px 0;"><em><a href="http://steamcommunity.com/profiles/76561198065571501">leetly</a></em></p>
   </div>
 </div>
 
