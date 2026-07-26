@@ -541,7 +541,7 @@ Custom loading screens, map icons and description can be added to your maps as a
 
 Map icon is the SVG image that appears on the loading screen. The file should be saved in the ``panorama/images/map_icons`` folder of your addon and should be named `map_icon_[mapname].svg`.
 
-The simplest approach is to generate one from an existing image (see the video below), but mappers who wish to craft their own SVG from scratch should be aware that Panorama ships a custom SVG renderer rather than a fully spec-compliant one. The list below summarises what works, what is partial, and what to avoid.
+The simplest approach is to generate one from an existing image (see the video below), but mappers who wish to craft their own SVG from scratch should be aware that Panorama ships a custom SVG renderer rather than a fully spec-compliant one. The list below summarises SVG properties that work, are partial, and which to avoid.
 
 ##### Supported
 
