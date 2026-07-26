@@ -498,14 +498,103 @@ If you're interested in learning more about particle systems, we recommend decom
 
 ## Sounds
 
-Good luck! Sounds are notoriously difficult to implement at the moment. 
+Sound adds another layer of immersion to your map, with fairly low effort.
 
+### Sound types
+- Footsteps
+- Global
+- Spatial
+
+#### Footsteps
+When making a material (see Texturing section), you can select the Attributes tab, then set the Hammer Surface Properties to something suitable, which will affect footsteps, bullet penetration, and whether bullets interact with it at all or phase through.
+
+#### Global
+Global sounds play directly on the player regardless of where the player is or where they move to.
+
+#### Spatial
+Spatial sounds play at a position in the world and will have a radius representing the audible range.
+
+### Soundevent
+In most scenarios, you will be using soundevents to play sounds to the player. Soundevents are explained well by Valve in the file located in your addon at `/soundevents/soundevents_addon.vsndevts`. Here is an excerpt from that file explaining what a soundevent is: 
+> "A soundevent in CS2 is a container that can host a combination of sound parameters, vsnds (.wavs), and other soundevents. Soundevents can be used to trigger other soundevents and therefore small hierarchies can be created if needed. For most ambient sounds in CS2, we use soundevents in small hierarchical structures (parent/child/grandchildren) for each area in a map."
+
+This file is home to all of your soundevents for a specific addon. From Valve:
+> "For soundevents to compile into the addon, this file must be kept named as soundevents_addon.vsndevts and all new soundevents should be added to this file."
+
+Soundevents have parameters you can set depending on what type of sound you intend to create. From Valve:
+> "Soundevents can now reference a "base" soundevent which is essentially any soundevent you wish to act as a template."
+
+This template should have common parameters that would be shared among soundevents of a certain type. In this file, Valve has already created some templates for you:
+> "...we have added some commonly used base soundevents which are defined in more detail at the end of this file. You can overwrite any property from a base event simply by re-adding the property to your own soundevent and giving it a new value. 
+>  - "amb.soundscapeParent.base" - use this as the main soundevent that triggers all sounds within a particular soundscape. This event also sets the reverb/dsp for the area. This soundevent's name needs to be placed in the soundevent property of the env_soundscape entity in hammer. Do not assign any .vsnd files to a parent event. 
+>  - "amb.looping.atXYZ.base" - loop a 3d sound at point in the world. Use 'getpos' in the dev console to obtain coordinates at the position of the camera.Markers have to be embedded in the wav file for a sound to loop.
+>  - "amb.looping.stereo.base" - loop a simple stereo background sound. Markers have to be embedded in the wav file for a sound to loop.
+>  - "amb.intermittent.randomAroundPlayer.base" - one shot sounds that play every so often at a random location around the player. eg. airplanes, rockfalls.
+>  - "amb.intermittent.atXYZ.base" - one shot sounds that play every so often at a specific location."
+
+In these base soundevents, "atXYZ" refers to the Spatial sound type, and "randomAroundPlayer" refers to the Global sound type.
+
+The file also contains several examples using these templates as the base, and showcases various parameters.
+
+TODO: Go through these examples and/or explain each parameter.
+
+TODO: Explain the distance volume mapping curve and similar parameters.
+
+> [!WARNING]
+> - Active soundevents stop playing when a player opens the team menu. Currently, we do not know of an intuitive workaround for this, because the player can do this anywhere at any time.
+> - Looped soundevents will deactivate if the player leaves the audible radius. To resolve, either increase the radius or have a trigger restart the sound within the audible range.
+> - Sounds which are triggered outside of the audible radius will immediately stop playing on dedicated servers.
+
+### Relevant Entities:
+
+#### `env_soundscape` / `snd_soundscape`
+> In-editor description: "An entity to control sound in an area. The active soundscape at any time is the last one that had line-of-sight to the player, and was within the radius."
+
+Soundscapes are the most complex entity available to you for adding sound to your map. A single soundscape can combine several different soundevents, using both Global and Spatial sound types. You could technically use one soundscape to control all of the audio in your map, or use multiple if your map has a diverse enough world to justify using different soundscapes.
+- For example, a soundscape for outside and inside.
+
+> [!WARNING]
+> - Soundscapes do not support I/O.
+> - Spawning inside of an env_soundscape will not activate the soundscape. You can resolve this issue by moving the env_soundscape radius slightly ahead of the player spawn point, or using an `env_soundscape_triggerable` (explained below)
+
+##### `env_soundscape_proxy` / `snd_soundscape_proxy`
+> In-editor description: "An entity that acts like a soundscape but gets all of its sound parameters from another env_soundscape entity."
+- Basically, this entity is a convenience, if you need to trigger your soundscape in multiple areas but don't want to manually select all of them. Instead, you would only edit one env_soundscape and the proxy soundscapes would point to that same entity.
+
+##### `env_soundscape_triggerable` / `snd_soundscape_triggerable`
+> In-editor description: "An entity that works like env_soundscape except that it works in conjunction with trigger_soundscape to determine when a player hears it."
+- This is useful when you want to activate a soundscape without relying on the LOS requirement that the regular env_soundscape entity has. It also activates when you teleport into it, which env_soundscape does not do.
+
+###### `trigger_soundscape`
+> In-editor description: "Soundscape trigger. It is not necessary to create outputs for this trigger. It automatically will trigger the soundscape referred to by its 'Soundscape' property."
+
+#### point_soundevent / snd_event_point
+> In-editor description: "Plays a sound event from a point. The point can be this entity or a specified entity's position."
+- This entity can be used instead of a soundscape if you want to play sound from a position in the world. It is slightly more convenient than using soundscape because soundscape requires you to input an XYZ position, whereas this entity will use its own origin to play the sound.
+
+> [!WARNING]
+> * Do not rely on the "Start on Spawn" object property when mapping for CS2KZ, because the team menu opens as soon as a player connects to the server. This means the sound will always stop playing for the player after they spawn.
+> * Instead, you will need to use a trigger to start the sound for the player.
+> * Note that soundevents played through this entity will activate for ALL players within audible range, not only the activator.
+> * TODO: Explain more caveats
+
+#### `ambient_generic`
+TODO: Explain how to use this.
 >[!WARNING]
->- Despite what some tutorials have suggested, the ambient_generic entity still functions.
->- Spawning inside of an env_soundscape will not activate the soundscape. You can resolve this issue by moving the env_soundscape radius slightly ahead of the player spawn point. 
->- Looped soundevents will deactivate if the player leaves the audible radius. To resolve, either increase the radius or have a trigger restart the sound within the audible range.
->- Sounds which are triggered outside of the audible radius will immediately stop playing on dedicated servers.
->- On dedicated servers when a trigger is employed to play a sound from an ambient_generic entity, if the trigger object is triggered more than once, the sound will stop and become unplayable for the rest of the game session.       
+> - Despite what some tutorials have suggested, the ambient_generic entity still functions.
+> - On dedicated servers when a trigger is employed to play a sound from an ambient_generic entity, if the trigger object is triggered more than once, the sound will stop and become unplayable for the rest of the game session.
+
+#### `point_clientcommand`
+TODO: Explain how to use this.
+
+### Custom Sounds
+Adding a custom sound is as simple as dropping a .wav into the `/sounds` folder in your addon. Once you do this, the editor will compile that file into a `.vsnd` which you can find by opening the Asset Browser and searching for the name.
+
+TODO: Explain common problems with selecting soundevents, like bad syntax resulting in the entire `soundevents_addon` file failing to compile.
+
+TODO: Explain setting loop markers using Wavosaur.
+
+Good luck! Sounds are notoriously difficult to implement at the moment.
 
 #### Learn more:
 
