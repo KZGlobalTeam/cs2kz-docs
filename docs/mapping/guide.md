@@ -582,7 +582,7 @@ The simplest approach is to generate one from an existing image (see the video b
 - **Percentages**: not resolved against the viewport or object bounding box, so geometry expressed as percentages will not render as expected.
 
 > [!NOTE]
-> - Treat percentages and unit-bearing lengths as unsupported outside the root `<svg>` element and author paths/clips/transform values in raw pixel units instead..
+> - Treat percentages and unit-bearing lengths as unsupported outside the root `<svg>` element and author paths/clips/transform values in raw pixel units instead.
 
 #### Learn more:
 
