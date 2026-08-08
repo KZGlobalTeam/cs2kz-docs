@@ -5,11 +5,12 @@ The map approval process structure will closely resemble GOKZ with a few key det
 ## 1. Submission
 
 - Upload your map to the [CS2 Steam Workshop](https://steamcommunity.com/app/730/workshop).
-- Post your map in the **new-maps** channel on the [Kreedz Mapping Discord server](https://discord.gg/R593VhE) for testing.
-- After sufficient testing and adjustments have taken place, post your map to the **cs2-global-map-submission** channel on the [Kreedz Mapping Discord server](https://discord.gg/R593VhE).
+- Post your map in the **New Maps** category on the [Global KZ Forum](https://forum.global-kz.net) for testing.
+- After sufficient testing and adjustments have taken place, submit your map via the [CS2KZ Global Submission Portal](https://submissions.cs2kz.org/).
 
 > [!NOTE]
-> - Maps which have not been posted to **new-maps** for testing will be instantly denied. If you do not receive feedback in **new-maps** after two weeks, you may submit your map. However, any issues found during review may lead to your map being denied.  
+> - Maps which have not been posted to **New Maps** for testing will be instantly denied. If you do not receive feedback in **New Maps** after two weeks, you may submit your map. However, any issues found during review may lead to your map being denied.
+> - Do not delete your **New Maps** topic until your map has been globally approved in case you are required to make adjustments to your map.
 > - A workshop link, descriptions of your course names and further details are required to be included with your submission. When posting your submission check the submission post guidelines beforehand to ensure your post meets every criteria.
 
 ## 2. Review
@@ -24,7 +25,7 @@ difficulty, ranking potential and adherence to community standards for each cour
 
 ## 3. Denied maps
 - During a **map release**, maps submitted which have not met the standard expected for the global map pool will be denied.
-- If your map is denied, you are encouraged to resolve any issues determined by the map approval team, post your updates to **new-maps** for testing, and resubmit for the next map release.
+- If your map is denied, you are encouraged to resolve any issues determined by the map approval team, post your updates to your **New Maps** topic for testing, and resubmit for the next map release.
 
 > [!WARNING]
 > - Given that CS2KZ is still undergoing development, the standards and guidelines for global maps are subject to occasional amendments. 
