@@ -1,5 +1,6 @@
 ---
 outline: [2, 3]
+zoomEnabled: true
 ---
 
 <div style="text-align: center;">
