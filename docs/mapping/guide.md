@@ -635,9 +635,6 @@ To do this, open the `Postprocessing Editor` and create a new ``.vpost`` file. S
 > You can have postprocessing limited to the volume of the mesh or encompassing the entire map by enabling `Master Volume`.
 >
 > By adjusting the postprocessing layers in the Postprocessing Editor, you can view the changes in real-time.
->
-> Check out these https://codeberg.org/GameChaos/s2-open-domain-lut-generator/tags
-
 
 ## Miscellaneous issues/bugs
 
@@ -831,11 +828,11 @@ If this is done, remember to set this env_combined_light_probe_volume’s priori
 <div style="display: flex; gap: 5px;">
   <div style="flex: 1;">
   <img src="/mapping/wordwater.png" alt="wordwater" style="max-width: 350px; display: block; margin: 0 auto;">
-  <p style="margin: 10px 0;"><em>49. word's infinite water tutorial, <a href="https://discord.com/channels/452163833973440522/1171813934832046173/1409374472594526319">discord link</a></em></p>
+  <p style="margin: 10px 0;"><em>49. w0rd's infinite water template, <a href="https://forum.global-kz.net/t/cs2-infinite-water/122">forum link</a></em></p>
   </div>
   <div style="flex: 1;">
   <img src="/mapping/jakkewater.png" alt="jakkewater" style="max-width: 350px; display: block; margin: 0 auto;">
-  <p style="margin: 10px 0;"><em>50. jakke's infinite water template, <a href="https://discord.com/channels/452163833973440522/1171813934832046173/1470094992453402726">discord link</a></em></p>
+  <p style="margin: 10px 0;"><em>50. jakke's infinite water template, <a href="https://forum.global-kz.net/t/cs2-infinite-water/122">forum link</a></em></p>
   </div>
 </div>
 
@@ -882,5 +879,5 @@ _Thank you for visiting_,
   </div>
 </div>
 
-  With support from the [CS2KZ mapping commmunity](https://discord.gg/R593VhE).
+  With support from the [CS2KZ mapping commmunity](https://discord.gg/QcqFmHssZG).
 
